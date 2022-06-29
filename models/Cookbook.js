@@ -11,6 +11,10 @@ Cookbook.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    cookbook_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
