@@ -16,12 +16,14 @@ Comment.init(
       allowNull: false,
     },
     recipe_id: {
+      type: DataTypes.INTEGER,
       references: {
         model: "cookbook",
         key: "id",
       },
     },
     user_id: {
+      type: DataTypes.INTEGER,
       references: {
         model: "user",
         key: "id",
