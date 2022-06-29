@@ -1,9 +1,51 @@
+#title {
+  background-color: gray;
+  color:white;
+  padding:40px;
+}
+
 #myTopnav {
   text-align: center;
 }
 
 .user-access {
   float: right;
+  color: white;
+  margin:10px;
+}
+
+.user-access a {
+  color:white;
+}
+
+img {
+  vertical-align: top;
+  width:400px;
+  height:auto;
+
+}
+
+#sign-up-section {
+  float:left;
+  border:solid;
+  border-radius:60px;
+  border-color: lightgray;
+  padding:70px;
+  box-shadow: 10px 3px 10px lightgray;
 }
 
 
+.marquee {
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee span {
+  display: inline-block;
+  position: relative;
+  left: 100%;
+  animation: marquee 8s linear infinite;
+}
+.marquee:hover span {
+  animation-play-state: paused;
+}
