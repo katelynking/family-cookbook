@@ -11,7 +11,7 @@ Recipe.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    recipe_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -19,8 +19,19 @@ Recipe.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-
+    ingredients: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "catergory",
+        key: "id",
+      },
+    },
     cookbook_id: {
+      type: DataTypes.INTEGER,
       references: {
         model: "cookbook",
         key: "id",
