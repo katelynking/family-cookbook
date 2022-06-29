@@ -1,21 +1,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Family Cookbook</title>
-    <link rel="stylesheet" href="public/css/jass.css">
+    <script src="https://kit.fontawesome.com/bbd96bf1b5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/style2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Lexend+Deca:wght@100;200&family=Sacramento&display=swap" rel="stylesheet">
+
+
+
   </head>
   
   <body>
-    <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
+    <div class="row">
+      <header class="col-12">
         <div class="user-access">
             <a href="#sign-up">sign up</a> | <a href="login">login</a>
         </div>
 
         <h1 id="title">
-          FAMILY COOKBOOK
+          Family Cookbook <span><i class="fa-thin fa-hat-chef"></i></span>
         </h1>
         
         <div class="navbar" id="myTopnav">
@@ -30,7 +38,7 @@
 
 
       </header>
-        <main class="container container-fluid mt-5">
+        <main class="container">
           <div class="row">
           <div class="col-3"><span id="sign-up-section">
               <h2 class="page-title">Sign up</h2>
@@ -53,28 +61,19 @@
                 </div>
               </form>
             </div>
-            
-            
 
 
-          
-
-
-          <div class="col-8" id="display-imgs">
-            <p class="marquee">
-                <span><img src="assets/001.jpg"></span>
-                <span><img src="assets/002.jpg"></span>
-                <span><img src="assets/003.jpg"></span>
-                <span><img src="assets/004.jpg"></span>
-                <span><img src="assets/005.jpg"></span>
-                <span><img src="assets/006.jpg"></span>
-                <!-- <img src="assets/001.jpg">
+          <div id="display-imgs">
+            <div class="marquee">
+                <span>
+                <img src="assets/001.jpg">
                 <img src="assets/002.jpg">
                 <img src="assets/003.jpg">
                 <img src="assets/004.jpg">
                 <img src="assets/005.jpg">
-                <img src="assets/006.jpg"> -->
-                </p>
+                <img src="assets/006.jpg">
+              </span>
+                </div>
           </div>
         </div>
         </main>

@@ -11,7 +11,15 @@ Gallery.init(
       primaryKey: true,
       autoIncrement: true,
     },
+<<<<<<< HEAD
     name: {
+=======
+    cookbook_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+>>>>>>> 41fac65323a1d08a4576f87002fb6ff41bac7c30
       type: DataTypes.STRING,
       allowNull: false,
     },
