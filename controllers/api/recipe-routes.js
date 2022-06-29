@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Recipe, Category, Tag, ProductTag } = require('../../models');
+const { Recipe, Category, Comment, User, Cookbook} = require('../../models');
 
 
 
@@ -7,7 +7,7 @@ const { Recipe, Category, Tag, ProductTag } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
-    //   include: [{ model: Category }, { model: Tag}],
+      // include: [{ model: Category }, { model: Comment }],
     });
     res.status(200).json(recipeData);
   } catch (err) {
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
-    //   include: [{ model: Category }, { model: Tag}],
+      include: [{ model: Category }, { model: Comment}],
     });
 
     if (!recipeData) {
@@ -33,39 +33,38 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// // create new recipe
-// router.post('/', (req, res) => {
-//   /* req.body should look like this...
-//     {
-//       recipe_name: "Basketball",
-//       price: 200.00,
-//       stock: 3,                 ???????? Don't know what this model has yet.
-//       tagIds: [1, 2, 3, 4]
-//     }
-//   */
-//   Recipe.create(req.body)
-//     .then((recipe) => {
-     
-//       if (req.body.tagIds.length) {
-//         const recipeTagIdArr = req.body.tagIds.map((tag_id) => {
-//           return {
-//             product_id: product.id,
-//             tag_id,
-//           };
-//         });
-//         return ProductTag.bulkCreate(productTagIdArr);
-//       }
-//       // if no product tags, just respond
-//       res.status(200).json(product);
-//     })
-//     .then((productTagIds) => res.status(200).json(productTagIds))
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(400).json(err);
-//     });
-// });
+// create new recipe
+router.post('/', (req, res) => {
+  /* req.body should look like this...
+    {
+      recipe_name: "cheesecake",
+      description: "Bake at 350 for 1 hour"
+      cookbook_id: 1             
+    }
+  */
+  Recipe.create(req.body)
+    // .then((recipe) => {
+     // not sure what this does
+    //   if (req.body.commentIds.length) {
+    //     const recipeCommentIdArr = req.body.commentIds.map((tag_id) => {
+    //       return {
+    //         product_id: product.id,
+    //         tag_id,
+    //       };
+    //     });
+    //     return ProductTag.bulkCreate(productTagIdArr);
+    //   }
+    //   // if no product tags, just respond
+    //   res.status(200).json(product);
+    // })
+    .then (res.status(200).json(product))
+    .catch((err) => {
+      console.log(err);
+      res.status(400).json(err);
+    });
+});
 
-// update product
+// // update product
 // router.put('/:id', (req, res) => {
 //   // update product data
 //   Product.update(req.body, {
