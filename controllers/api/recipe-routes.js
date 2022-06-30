@@ -1,10 +1,8 @@
-const router = require('express').Router();
-const { Recipe, Category, Comment, User, Cookbook} = require('../../models');
-
-
+const router = require("express").Router();
+const { Recipe, Category, Comment, User, Cookbook } = require("../../models");
 
 // get all recipes
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
       // include: [{ model: Category }, { model: Comment }],
@@ -16,14 +14,14 @@ router.get('/', async (req, res) => {
 });
 
 // get one recipe
-router.get('/:id', async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
-      include: [{ model: Category }, { model: Comment}],
+      include: [{ model: Category }, { model: Comment }],
     });
 
     if (!recipeData) {
-      res.status(404).json({ message: 'No recipe found with that id!' });
+      res.status(404).json({ message: "No recipe found with that id!" });
       return;
     }
 
@@ -34,7 +32,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // create new recipe
-router.post('/', (req, res) => {
+router.post("/", (req, res) => {
   /* req.body should look like this...
     {
       recipe_name: "cheesecake",
@@ -44,7 +42,7 @@ router.post('/', (req, res) => {
   */
   Recipe.create(req.body)
     // .then((recipe) => {
-     // not sure what this does
+    // not sure what this does
     //   if (req.body.commentIds.length) {
     //     const recipeCommentIdArr = req.body.commentIds.map((tag_id) => {
     //       return {
@@ -57,7 +55,7 @@ router.post('/', (req, res) => {
     //   // if no product tags, just respond
     //   res.status(200).json(product);
     // })
-    .then (res.status(200).json(product))
+    .then((recipe) => res.status(200).json(recipe))
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
@@ -106,7 +104,7 @@ router.post('/', (req, res) => {
 //     });
 // });
 
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
       where: {
@@ -115,7 +113,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!recipeData) {
-      res.status(404).json({ message: 'No recipe found with that id!' });
+      res.status(404).json({ message: "No recipe found with that id!" });
       return;
     }
 

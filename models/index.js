@@ -3,6 +3,7 @@ const Cookbook = require("./Cookbook");
 const Recipe = require("./Recipe");
 const Comment = require("./Comment");
 const UserCookbook = require("./UserCookbook");
+const Category = require("./Category");
 
 User.belongsToMany(Cookbook, {
   through: {
@@ -33,4 +34,9 @@ User.hasMany(Comment, {
   onDelete: "CASCADE",
 });
 
-module.exports = { User, Cookbook, Recipe, Comment, UserCookbook };
+Recipe.hasOne(Category, {
+  foreignKey: "recipe_id",
+  onDelete: "CASCADE",
+});
+
+module.exports = { User, Cookbook, Recipe, Comment, UserCookbook, Category };

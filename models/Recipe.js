@@ -19,7 +19,22 @@ Recipe.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-
+    ingredients: {
+      type: DataTypes.STRING,
+      default: [],
+      allowNull: false,
+    },
+    img_name: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "category",
+        key: "id",
+      },
+    },
     cookbook_id: {
       type: DataTypes.INTEGER,
       references: {
