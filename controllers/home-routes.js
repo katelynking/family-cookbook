@@ -10,12 +10,31 @@ const {
 // Import the custom middleware
 const withAuth = require("../utils/auth");
 
-
-
-
-
+router.get("/cookbooks", async (req, res) => {
+  try {
+    const cbData = await Cookbook.findAll({
+      // include: [{ model: Category }, { model: Comment }],
+    });
+    console.log("cbdata ", cbData);
+    const books = cbData.map((r) => r.get({ plain: true }));
+    console.log(books);
+    res.render("homepage-cb", { books });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 router.get("/", async (req, res) => {
+  try {
+    res.render("homepage");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get("/recipes", async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
       // include: [{ model: Category }, { model: Comment }],
@@ -23,65 +42,48 @@ router.get("/", async (req, res) => {
 
     const recipes = recipeData.map((r) => r.get({ plain: true }));
     console.log(recipes);
-    res.render("homepage", { recipes });
+    res.render("recipes", { recipes });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-
-
-
-
 // get recipe by category
 router.get("/categories/:id", async (req, res) => {
   try {
-    const recipeData = await Recipe.findAll( {
-      
-        where: {
-          category_id: req.params.id,
-        },
-      
+    const recipeData = await Recipe.findAll({
+      where: {
+        category_id: req.params.id,
+      },
     });
-if (!recipeData) {
-  res.status(404).json({ message: "No category found with that id!" });
-  return;
-}
-res.status(200).json(recipeData);
+    if (!recipeData) {
+      res.status(404).json({ message: "No category found with that id!" });
+      return;
+    }
+    res.status(200).json(recipeData);
   } catch (err) {
-  res.status(500).json(err);
-}
+    res.status(500).json(err);
+  }
 });
-
-
-
 
 // get recipe by id
-router.get("/:id", async (req, res) => {
+router.get("/recipes/:id", async (req, res) => {
   try {
-    const recipeData = await Recipe.findAll( {
-      
-        where: {
-          id: req.params.id,
-        },
-      
+    const recipeData = await Recipe.findAll({
+      where: {
+        id: req.params.id,
+      },
     });
-if (!recipeData) {
-  res.status(404).json({ message: "No recipe found with that id!" });
-  return;
-}
-res.status(200).json(recipeData);
+    if (!recipeData) {
+      res.status(404).json({ message: "No recipe found with that id!" });
+      return;
+    }
+    res.status(200).json(recipeData);
   } catch (err) {
-  res.status(500).json(err);
-}
+    res.status(500).json(err);
+  }
 });
-
-
-
-
-
-
 
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
