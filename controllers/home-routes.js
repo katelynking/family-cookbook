@@ -10,6 +10,21 @@ const {
 // Import the custom middleware
 const withAuth = require("../utils/auth");
 
+router.get("/cookbooks", async (req, res) => {
+  try {
+    const cbData = await Cookbook.findAll({
+      // include: [{ model: Category }, { model: Comment }],
+    });
+    console.log("cbdata ", cbData);
+    const books = cbData.map((r) => r.get({ plain: true }));
+    console.log(books);
+    res.render("homepage-cb", { books });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get("/", async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
