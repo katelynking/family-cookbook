@@ -10,7 +10,6 @@
   margin:15px;
 }
 
-
 .navbar {
   margin-left: 15%;
 }
@@ -22,8 +21,8 @@
 .user-access {
   float: right;
   color: white;
-  /* margin-top: 45px;
-  margin-right: 20px; */
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 .user-access a {
