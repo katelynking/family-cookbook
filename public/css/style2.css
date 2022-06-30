@@ -10,8 +10,8 @@
   margin:15px;
 }
 
-.navbar {
-  margin-left: 15%;
+#myTopnav {
+  justify-content: space-evenly;
 }
 
 #myTopnav a {
@@ -32,14 +32,14 @@
 
 img {
   vertical-align: top;
-  width:400px;
+  width:auto;
   height:auto;
-
 }
 
-.row {
+/* .row {
   position:relative;
-}
+  justify-content: space-evenly;
+} */
 
 .btn {
   font-family:'Alata', sans-serif;
@@ -59,15 +59,36 @@ img {
   font-family:'Lexend Deca', sans-serif;
 }
 
+.recipe-card {
+  text-align: center;
+  padding: 10px;
+  
+}
+
+.recipe-name {
+  font-family: 'Lexend Deca Light', sans-serif;
+  font-size: 24px;
+  
+}
+
+.recipe-info {
+  font-family: 'Lexend Deca', sans-serif;
+  text-align: center;
+}
+
+
+
 .marquee {
+  overflow: hidden;
   margin: 0 auto;
   white-space: inherit;
-  overflow:hidden;
   z-index: 2;
 }
 .marquee span {
+  list-style: none;
+  height: 100%;
   display: flex;
-  position:absolute;
+  position:fixed;
   left: 100%;
   animation: scrolling 30s linear infinite;
 }
