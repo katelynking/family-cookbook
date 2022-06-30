@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-class Cookbook extends Model {}
+class Gallery extends Model {}
 
-Cookbook.init(
+Gallery.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -19,13 +19,21 @@ Cookbook.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    starting_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    ending_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "cookbook",
+    modelName: 'gallery',
   }
 );
 
-module.exports = Cookbook;
+module.exports = Gallery;

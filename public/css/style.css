@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --primary: #3d5852;
   --secondary: #86938f;
   --tertiary: #5e877f;
@@ -7,6 +7,10 @@
   --dark: #182c23;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
+} */
+
+#myTopnav {
+  text-align: center;
 }
 
 body {
