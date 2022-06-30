@@ -25,56 +25,49 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET one gallery
-// Use the custom middleware before allowing the user to access the gallery
-// router.get("/gallery/:id", withAuth, async (req, res) => {
-//   try {
-//     const dbGalleryData = await Gallery.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: Painting,
-//           attributes: [
-//             "id",
-//             "title",
-//             "artist",
-//             "exhibition_date",
-//             "filename",
-//             "description",
-//           ],
-//         },
-//       ],
-//     });
+// get recipe by category
+router.get("/categories/:id", async (req, res) => {
+  try {
+    const recipeData = await Recipe.findAll({
+      where: {
+        category_id: req.params.id,
+      },
+    });
+    if (!recipeData) {
+      res.status(404).json({ message: "No category found with that id!" });
+      return;
+    }
+    res.status(200).json(recipeData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-//     const gallery = dbGalleryData.get({ plain: true });
-//     res.render("gallery", { gallery, loggedIn: req.session.loggedIn });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
+// get recipe by id
+router.get("/:id", async (req, res) => {
+  try {
+    const recipeData = await Recipe.findAll({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!recipeData) {
+      res.status(404).json({ message: "No recipe found with that id!" });
+      return;
+    }
+    res.status(200).json(recipeData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-// // GET one painting
-// // Use the custom middleware before allowing the user to access the painting
-// router.get("/painting/:id", withAuth, async (req, res) => {
-//   try {
-//     const dbPaintingData = await Painting.findByPk(req.params.id);
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
 
-//     const painting = dbPaintingData.get({ plain: true });
-
-//     res.render("painting", { painting, loggedIn: req.session.loggedIn });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
-
-// router.get("/login", (req, res) => {
-//   if (req.session.loggedIn) {
-//     res.redirect("/");
-//     return;
-//   }
-
-//   res.render("login");
-// });
+  res.render("login");
+});
 
 module.exports = router;

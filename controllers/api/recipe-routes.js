@@ -11,25 +11,36 @@ router.get("/", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+
 });
 
-// get one recipe
+
+
+
+// get recipe by category
 router.get("/:id", async (req, res) => {
   try {
-    const recipeData = await Recipe.findByPk(req.params.id, {
-      include: [{ model: Category }, { model: Comment }],
+    const recipeData = await Recipe.findAll( {
+      
+        where: {
+          category_id: req.params.id,
+        },
+      
     });
-
-    if (!recipeData) {
-      res.status(404).json({ message: "No recipe found with that id!" });
-      return;
-    }
-
-    res.status(200).json(recipeData);
+if (!recipeData) {
+  res.status(404).json({ message: "No recipe found with that id!" });
+  return;
+}
+res.status(200).json(recipeData);
   } catch (err) {
-    res.status(500).json(err);
-  }
+  res.status(500).json(err);
+}
 });
+
+
+
+
+
 
 // create new recipe
 router.post("/", (req, res) => {
