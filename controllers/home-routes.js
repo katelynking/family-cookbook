@@ -27,13 +27,22 @@ router.get("/cookbooks", async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
+    res.render("homepage");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get("/recipes", async (req, res) => {
+  try {
     const recipeData = await Recipe.findAll({
       // include: [{ model: Category }, { model: Comment }],
     });
 
     const recipes = recipeData.map((r) => r.get({ plain: true }));
     console.log(recipes);
-    res.render("homepage", { recipes });
+    res.render("recipes", { recipes });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -59,7 +68,7 @@ router.get("/categories/:id", async (req, res) => {
 });
 
 // get recipe by id
-router.get("/:id", async (req, res) => {
+router.get("/recipes/:id", async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
       where: {
