@@ -1,3 +1,47 @@
+<img src="/assets/008.jpg" class="banner-img">
+<h2 class="regular-font" style="margin-left:47%;"><br>
+    "Cooking is one of the greatest gifts you can give to those you love." - Ina Garten
+  </h2>
+<div class="row recipe-card">
+  
+   
+   <div class="col-3" style="width:100%; height:400px;overflow:scroll;padding:20px;">
+    
+
+
+    <h2 class="regular-font">Most recent recipes in the
+      <br>
+      <span class="cbname-font">
+      {{ cookbook_name }} 
+      Rakonjac
+      </span>
+      <br>
+      Cookbook
+      <br><br>
+      <i class="fa-regular fa-heart"></i>
+
+      <button type="submit" class="btn btn-block add-recipe-btn">
+      Add a recipe!
+      </button>
+
+      <p class="recipe-list">
+      <a href="/recipes/1">{{recipe.recipe_name}}Baklava</a>
+      <br><br>...<br><br><br><br><br><br><br><br>
+      <a href="/recipes/2">Paprikas <br></a>
+      <a href="/recipes/3">Pečenja <br></a>
+      </p>
+      
+    </h2>
+    </div>
+
+
+
+<div class="col-9">
+  
+  <div class="row cb-card">
 {{#each books}}
   {{> cb-details}}
 {{/each}}
+</div>
+</div>
+</div>

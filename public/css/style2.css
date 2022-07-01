@@ -1,33 +1,78 @@
-.col-12 {
-  background-image: linear-gradient(gray, rgb(85, 85, 85));
-  padding:25px;
+.title-block {
+  position: fixed;
 }
 
 #main-title {
-  font-family: 'Sacramento', cursive;
-  color:white;
-  font-size: 40px;
+  /* font-family:'Sacramento', cursive; */
+  /* color: white; */
+  /* font-size:40px; */
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight:200;
+  color:rgb(0, 0, 0);
+  font-size: 30px;
   margin:15px;
 }
 
+#main-title a {
+  color:teal;
+}
+
+#main-title a:hover {
+  text-decoration: none;
+}
+
+.regular-font {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight:200;
+  letter-spacing: 0.1em;
+  font-size:16px;
+
+}
+
+.cbname-font {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 200;
+  font-size: 26px;
+  line-height:180%;
+  color:teal;
+}
+
 #myTopnav {
-  justify-content: space-evenly;
+  justify-content:space-evenly;
+  position:static;
 }
 
 #myTopnav a {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Alata', sans-serif;
+  font-variant:small-caps;
+  color:black;
+  letter-spacing: 0.3em;
+  
+}
+
+#myTopnav a:hover {
+  color:rgb(237, 152, 67);
+  text-decoration: none;
 }
 
 .user-access {
   float: right;
-  color: white;
-  margin-top: 20px;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
   margin-right: 20px;
+  font-weight:200;
 }
 
 .user-access a {
-  color:white;
-  font-family: 'Lexend Deca', sans-serif;
+  color:black;
+  font-family: 'Alata', sans-serif;
+  font-variant:small-caps;
+  letter-spacing: 0.1em;
+}
+
+.user-access a:hover {
+  color:teal;
+  text-decoration: none;
 }
 
 img {
@@ -36,13 +81,57 @@ img {
   height:auto;
 }
 
-/* .row {
+.recipe-card {
   position:relative;
   justify-content: space-evenly;
-} */
+  text-align: center;
+  padding: 10px;
+}
 
-.btn {
+.cb-card {
+  position:relative;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 20px;
+}
+
+.add-recipe-btn {
+  color:white;
+  background-color:rgb(237, 152, 67);
+  margin-bottom:20px;
+  
+}
+
+.add-recipe-btn:hover {
+  opacity: 77%;
+}
+
+.recipe-list a {
+  color: teal;
+  font-family: 'Alata', sans-serif;
+  font-weight: 200;
+  font-variant: all-small-caps;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  line-height:220%;
+}
+
+.recipe-list a:hover {
+  text-decoration: none;
+}
+
+
+
+.join-btn {
   font-family:'Alata', sans-serif;
+  background-color:teal;
+  color:white;
+  float:right;
+  margin:10% 0%;
+}
+
+.join-btn:hover {
+  opacity: 77%;
 }
 
 
@@ -59,11 +148,6 @@ img {
   font-family:'Lexend Deca', sans-serif;
 }
 
-.recipe-card {
-  text-align: center;
-  padding: 10px;
-  
-}
 
 .recipe-name {
   font-family: 'Lexend Deca Light', sans-serif;
@@ -76,7 +160,25 @@ img {
   text-align: center;
 }
 
+.recipe-list {
+  color:rgb(13, 87, 216);
+  font-size:16px;
+}
 
+.fa-heart {
+  color: rgb(203, 29, 119);
+  margin-bottom:20px;
+}
+
+.fa-kitchen-set {
+  color: gray;
+}
+
+.banner-img {
+  width:105%;
+  height:auto;
+  position:relative;
+}
 
 .marquee {
   overflow: hidden;
@@ -94,6 +196,6 @@ img {
 }
 
 @keyframes scrolling {
-  0%   { left: -20%; }
-  100% { left: -100%; }
+  0%   { left: 0%; }
+  100% { left: -208%; }
 }
