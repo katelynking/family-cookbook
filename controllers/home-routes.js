@@ -34,6 +34,15 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/add-recipe", async (req, res) => {
+  try {
+    res.render("add-recipe");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get("/recipes", async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
