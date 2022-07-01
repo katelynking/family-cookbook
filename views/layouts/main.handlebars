@@ -22,20 +22,27 @@
           <i class="fa-solid fa-kitchen-set"></i>
           </a>
           </span>
-          <span class="user-access">
-            <a href="#sign-up">sign up</a> | <a href="login">login</a>
+          {{#if loggedIn}}
+            <span class="user-access">
+            <a>Welcome</a> | <a id="logout" href="#">logout</a>
             <i class="fa-regular fa-heart"></i>
             </span>
+          {{else}}
+            <span class="user-access">
+            <a href="login">sign up</a> | <a href="login">login</a>
+            <i class="fa-regular fa-heart"></i>
+            </span>
+          {{/if}}
         </div>
       </header>
     </div>
     
     <div class="navbar" id="myTopnav">
-      <a href="/cookbooks">view all</a> 
-      <a href="#breakfast">breakfast</a> 
-      <a href="#mains">mains</a> 
-      <a href="#sides">sides</a>
-      <a href="#desserts">desserts</a>
+      <a href="/cookbook">cookbook</a> 
+      <a href="/breakfast">breakfast</a> 
+      <a href="/mains">mains</a> 
+      <a href="/sides">sides</a>
+      <a href="/desserts">desserts</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
     </div>
  

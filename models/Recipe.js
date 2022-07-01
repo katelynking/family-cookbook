@@ -21,7 +21,10 @@ Recipe.init(
     },
     ingredients: {
       type: DataTypes.STRING,
-      default: [],
+      allowNull: false,
+    },
+    steps: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     img_name: {
@@ -35,10 +38,10 @@ Recipe.init(
         key: "id",
       },
     },
-    cookbook_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "cookbook",
+        model: "user",
         key: "id",
       },
     },

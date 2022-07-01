@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Recipe, Category, Comment, User, Cookbook } = require("../../models");
+const { Recipe, Category, Comment, User } = require("../../models");
 
 // get all recipes
 router.get("/", async (req, res) => {
@@ -11,36 +11,25 @@ router.get("/", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
 });
-
-
-
 
 // get recipe by category
 router.get("/:id", async (req, res) => {
   try {
-    const recipeData = await Recipe.findAll( {
-      
-        where: {
-          category_id: req.params.id,
-        },
-      
+    const recipeData = await Recipe.findAll({
+      where: {
+        category_id: req.params.id,
+      },
     });
-if (!recipeData) {
-  res.status(404).json({ message: "No recipe found with that id!" });
-  return;
-}
-res.status(200).json(recipeData);
+    if (!recipeData) {
+      res.status(404).json({ message: "No recipe found with that id!" });
+      return;
+    }
+    res.status(200).json(recipeData);
   } catch (err) {
-  res.status(500).json(err);
-}
+    res.status(500).json(err);
+  }
 });
-
-
-
-
-
 
 // create new recipe
 router.post("/", (req, res) => {
