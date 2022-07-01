@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn">Select Category</button>
+        <div class="dropdown-content" id="category">
+          <a href="#" value="breakfast">breakfast</a>
+          <a href="#" value="sides">side</a>
+          <a value="mains">mains</a>
+          <a href="#" value="desserts">desserts</a>
+        </div>
+      </div>
+      
+
+    <form action="#">
+        <label for="recipe-name">Recipe Name:</label>
+        <input type="text" id="recipe-name" name="recipe-name"><br><br>
+       
+        <label for="description">Recipe Description:</label>
+        <input type="text" id="description" name="description"><br><br>
+
+        <label for="add-ingredient">Add ingredient:</label>
+        <input type="text" id="add-ingredient" name="add-ingredient"><br><br>
+
+        <button type="button" id="ingredient-button">Add ingredient</button>
+       
+        
+        <div><ul id="ingredient-text-area"></ul></div>
+
+        <button type="button" id="step-button">Add steps</button>
+
+        <label for="steps">Steps:</label>
+        <input type="text" id="add-step" name="step"><br><br> 
+
+        <div><ol id="step-text-area"></ol></div><br><br>
+        <button type="button" id="upload-button">Upload Recipe</button>
+ 
+      </form>
+    <script src = "index.js"></script>
+</body>
+</html>
