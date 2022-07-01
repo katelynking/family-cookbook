@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Adding Recipe</title>
+</head>
+<body>
+  <div class="row">
+    <div class="col-12">
+    <div class="add-recipe-title regular-font">
+      Add your recipe!
+      </div>
+      </div>
+    <div class="col-6 add-recipe-vp">
+      
+  
+      <div class="dropdown">
+        <button class="dropbtn recipe-btn">Select Category</button>
+        <div class="dropdown-content" id="category">
+          <a value="breakfast" href="#">breakfast</a>
+          <a href="#">sides</a>
+          <a href="#">mains</a>
+          <a href="#">desserts</a>
+        </div>
+      </div>
+
+      <form action="#">
+        <label for="recipe-name">Recipe Name:</label>
+        <input type="text" id="recipe-name" name="recipe-name"><br><br>
+
+         <label for="description">Recipe Description:</label>
+        <input type="text" id="description" name="description"><br><br>
+
+        <label for="add-ingredient">Add ingredient:</label>
+        <input type="text" id="add-ingredient" name="add-ingredient"><br><br>
+
+        <button type="button" class="btn btn-lg recipe-btn">Add ingredient</button>
+        
+        <div><ul id="ingredient-text-area"></ul></div>
+
+        <button type="button" class="btn btn-lg recipe-btn">Add steps</button>
+
+        <label for="steps">Steps:</label>
+        <input type="text" id="add-step" name="step"><br><br> 
+
+        <div><ol id="step-text-area"></ol></div>
+
+         <button type="upload" class="btn btn-lg recipe-btn">Upload Recipe</button>
+
+      </form>
+      </div>
+
+    <script src = "index.js"></script>
+    
+</body>
+</html>

@@ -5,35 +5,30 @@
 <div class="row recipe-card">
   
    
-   <div class="col-3" style="width:100%; height:400px;overflow:scroll;padding:20px;">
-    
+   <div class="col-3" style="width:100%; height:300px;overflow:scroll;padding:20px;">
 
-
-    <h2 class="regular-font">Most recent recipes in the
-      <br>
-      
-        <select name="cookbook" class="dropdown">
-        <option value="{{ cookbook_name }}" class="cbname-font">
-      {{ cookbook_name }} cookbook1 </option>
-      <option value="{{ cookbook_name }}" class="cbname-font">King</option>
-      </select>
-      
-      </select>
-      </span>
-      <br>
+    <h2 class="regular-font">Most recent recipes in
+      <br>the
+      {{!-- username --}}
+      <u>King</u>
       Cookbook
-      <br>
+      <br><br>
       <i class="fa-regular fa-heart"></i>
 
-      <button type="submit" class="btn btn-block add-recipe-btn">
+      <a class="btn btn-block add-recipe-btn regular-font" role="button" href="/add-recipe">
       Add a recipe!
-      </button>
-
+      </a>
+      
+      {{!-- need to make an append list of recently added recipes? --}}
       <p class="recipe-list">
-      <a href="/recipes/1">{{recipe.recipe_name}}Baklava</a>
+      {{#each recipes}}
+        {{> recipe_name}}
+      {{/each}}
+      <a href="/recipes/1">Baklava <br></a>
       <br><br>...<br><br><br><br><br><br><br><br>
       <a href="/recipes/2">Paprikas <br></a>
       <a href="/recipes/3">Pečenja <br></a>
+      
       </p>
       
     </h2>
@@ -47,6 +42,5 @@
 {{#each books}}
   {{> cb-details}}
 {{/each}}
-</div>
 </div>
 </div>

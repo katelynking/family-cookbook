@@ -10,35 +10,39 @@
 <body>
     <div class="dropdown">
         <button class="dropbtn">Select Category</button>
-        <div class="dropdown-content">
-          <a href="#">breakfast</a>
-          <a href="#">side mains</a>
-          <a href="#">desserts</a>
+        <div class="dropdown-content" id="category">
+          <a href="#" value="breakfast">breakfast</a>
+          <a href="#" value="sides">side</a>
+          <a value="mains">mains</a>
+          <a href="#" value="desserts">desserts</a>
         </div>
       </div>
-      <button type="upload-button">Upload Recipe</button>
+      
 
     <form action="#">
         <label for="recipe-name">Recipe Name:</label>
         <input type="text" id="recipe-name" name="recipe-name"><br><br>
+       
+        <label for="description">Recipe Description:</label>
+        <input type="text" id="description" name="description"><br><br>
 
         <label for="add-ingredient">Add ingredient:</label>
         <input type="text" id="add-ingredient" name="add-ingredient"><br><br>
 
-        <button type="button">Add ingredient</button>
-        <textarea id="steps" name="steps" rows="4" cols="50"></textarea>
+        <button type="button" id="ingredient-button">Add ingredient</button>
+       
         
         <div><ul id="ingredient-text-area"></ul></div>
 
-        <button id="button">Add steps</button>
-        <textarea id="#" name="#" rows="4" cols="50"></textarea>
+        <button type="button" id="step-button">Add steps</button>
 
         <label for="steps">Steps:</label>
         <input type="text" id="add-step" name="step"><br><br> 
 
-        <div><ol id="step-text-area"></ol></div>
+        <div><ol id="step-text-area"></ol></div><br><br>
+        <button type="button" id="upload-button">Upload Recipe</button>
  
       </form>
-    
+    <script src = "index.js"></script>
 </body>
 </html>

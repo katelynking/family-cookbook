@@ -16,20 +16,20 @@ let user;
 let ingredientsArray = []; //stores ingredients to be converted into unordered list for textArea and string for database
 let stepsArray = []; //stores steps to be converted into ordered list for textArea and string for database
 
-if (window.location.pathname === '/upload') {
+
     recipeName = document.getElementById("recipe-name");
     description = document.getElementById("description");
-    ingredients = document.getElementById("ingredients");
+    ingredients = document.getElementById("add-ingredient");
     ingredientButton = document.getElementById("ingredient-button");
     ingredientTextArea = document.getElementById("ingredient-text-area");
-    steps = document.getElementById("steps");
+    steps = document.getElementById("add-step");
     stepButton = document.getElementById("step-button");
     stepTextArea = document.getElementById("step-text-area");
     category = document.getElementById("category");
     imgFileName = document.getElementById("image-file-name");
     uploadButton = document.getElementById("upload-button");
     user = document.getElementById("user");
-}
+
 
 const addIngredient = () => {
     ingredientsArray.push(ingredients.value);
@@ -37,6 +37,7 @@ const addIngredient = () => {
     let newIngredient = document.createElement("li");
     newIngredient.textContent = ingredients.value;
     ingredientTextArea.appendChild(newIngredient);
+    console.log(newIngredient);
 
     // how do i make the input field clear once the ingredient is pushed so the user can add a new ingredient?
 }
@@ -51,11 +52,12 @@ const addStep = () => {
 }
 
 
-const uploadRecipe = (recipe) => fetch("/recipes", { //we still need to make this POST route
-    method: 'POST',
-    body: JSON.stringify(recipe),
-});
+// const uploadRecipe = (recipe) => fetch("/recipes", { //we still need to make this POST route
+//     method: 'POST',
+//     body: JSON.stringify(recipe),
+// });
 
+const uploadRecipe = (recipe) => console.log(recipe);
 
 const handleRecipeUpload = () => { 
     const newRecipe = {
