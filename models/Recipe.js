@@ -21,7 +21,10 @@ Recipe.init(
     },
     ingredients: {
       type: DataTypes.STRING,
-      default: [],
+      allowNull: false,
+    },
+    steps: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     img_name: {

@@ -17,6 +17,11 @@
           </div>
           <div class="row">
           <div class="col-3"><span id="sign-up-section">
+              {{#if loggedIn}}
+
+              <h2 class="page-title">Welcome</h2>
+
+              {{else}}
               <h2 class="page-title">Sign up</h2>
               <br>
               <form class="form signup-form">
@@ -37,6 +42,8 @@
                   
                 </div>
               </form>
+              <script src="./js/login.js"></script>
+              {{/if}}
             </div>
         </div>
         </main>
