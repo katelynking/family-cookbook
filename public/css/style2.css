@@ -1,0 +1,214 @@
+.title-block {
+  position: fixed;
+}
+
+#main-title {
+  /* font-family:'Sacramento', cursive; */
+  /* color: white; */
+  /* font-size:40px; */
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight:200;
+  color:rgb(0, 0, 0);
+  font-size: 30px;
+  margin:15px;
+}
+
+#main-title a {
+  color:teal;
+}
+
+#main-title a:hover {
+  text-decoration: none;
+}
+
+.regular-font {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight:200;
+  letter-spacing: 0.1em;
+  font-size:16px;
+
+}
+
+.cbname-font {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color:teal;
+}
+
+.dropdown {
+  text-align:center;
+  text-align-last: center;
+  padding:10px;
+  border-radius:8px;
+  margin:10px;
+  border:none;
+  
+}
+
+.dropdown:active {
+  border:none;
+}
+
+#myTopnav {
+  justify-content:space-evenly;
+  position:static;
+}
+
+#myTopnav a {
+  font-family: 'Alata', sans-serif;
+  font-variant:small-caps;
+  color:black;
+  letter-spacing: 0.3em;
+  
+}
+
+#myTopnav a:hover {
+  color:rgb(237, 152, 67);
+  text-decoration: none;
+}
+
+.user-access {
+  float: right;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+  margin-right: 20px;
+  font-weight:200;
+}
+
+.user-access a {
+  color:black;
+  font-family: 'Alata', sans-serif;
+  font-variant:small-caps;
+  letter-spacing: 0.1em;
+}
+
+.user-access a:hover {
+  color:teal;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+  width:auto;
+  height:auto;
+}
+
+.recipe-card {
+  position:relative;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 10px;
+}
+
+.cb-card {
+  position:relative;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 20px;
+}
+
+.add-recipe-btn {
+  color:white;
+  background-color:rgb(237, 152, 67);
+  margin-bottom:20px;
+  
+}
+
+.add-recipe-btn:hover {
+  opacity: 77%;
+}
+
+.recipe-list a {
+  color: teal;
+  font-family: 'Alata', sans-serif;
+  font-weight: 200;
+  font-variant: all-small-caps;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  line-height:220%;
+}
+
+.recipe-list a:hover {
+  text-decoration: none;
+}
+
+
+
+.join-btn {
+  font-family:'Alata', sans-serif;
+  background-color:teal;
+  color:white;
+  float:right;
+  margin:10% 0%;
+}
+
+.join-btn:hover {
+  opacity: 77%;
+}
+
+
+#sign-up-section {
+  position:absolute;
+  z-index: 1;
+  margin-top:20px;
+  border:solid;
+  border-radius:50px;
+  border-color: lightgray;
+  padding:50px;
+  box-shadow: 0px 3px 80px white;
+  background-color: white;
+  font-family:'Lexend Deca', sans-serif;
+}
+
+
+.recipe-name {
+  font-family: 'Lexend Deca Light', sans-serif;
+  font-size: 24px;
+  
+}
+
+.recipe-info {
+  font-family: 'Lexend Deca', sans-serif;
+  text-align: center;
+}
+
+.recipe-list {
+  color:rgb(13, 87, 216);
+  font-size:16px;
+}
+
+.fa-heart {
+  color: rgb(203, 29, 119);
+  margin-bottom:20px;
+}
+
+.fa-kitchen-set {
+  color: gray;
+}
+
+.banner-img {
+  width:105%;
+  height:auto;
+  position:relative;
+}
+
+.marquee {
+  overflow: hidden;
+  margin: 0 auto;
+  white-space: inherit;
+  z-index: 2;
+}
+.marquee span {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  position:fixed;
+  left: 100%;
+  animation: scrolling 30s linear infinite;
+}
+
+@keyframes scrolling {
+  0%   { left: 0%; }
+  100% { left: -208%; }
+}

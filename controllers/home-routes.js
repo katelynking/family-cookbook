@@ -1,84 +1,96 @@
-const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
+const router = require("express").Router();
+const {
+  User,
+  Cookbook,
+  Recipe,
+  Comment,
+  UserCookbook,
+  Category,
+} = require("../models");
 // Import the custom middleware
-const withAuth = require('../utils/auth');
+const withAuth = require("../utils/auth");
 
-// GET all galleries for homepage
-router.get('/', async (req, res) => {
+router.get("/cookbooks", async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findAll({
-      include: [
-        {
-          model: Painting,
-          attributes: ['filename', 'description'],
-        },
-      ],
+    const cbData = await Cookbook.findAll({
+      // include: [{ model: Category }, { model: Comment }],
     });
-
-    const galleries = dbGalleryData.map((gallery) =>
-      gallery.get({ plain: true })
-    );
-
-    res.render('homepage', {
-      galleries,
-      loggedIn: req.session.loggedIn,
-    });
+    console.log("cbdata ", cbData);
+    const books = cbData.map((r) => r.get({ plain: true }));
+    console.log(books);
+    res.render("homepage-cb", { books });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-// GET one gallery
-// Use the custom middleware before allowing the user to access the gallery
-router.get('/gallery/:id', withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findByPk(req.params.id, {
-      include: [
-        {
-          model: Painting,
-          attributes: [
-            'id',
-            'title',
-            'artist',
-            'exhibition_date',
-            'filename',
-            'description',
-          ],
-        },
-      ],
+    res.render("homepage");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get("/recipes", async (req, res) => {
+  try {
+    const recipeData = await Recipe.findAll({
+      // include: [{ model: Category }, { model: Comment }],
     });
 
-    const gallery = dbGalleryData.get({ plain: true });
-    res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
+    const recipes = recipeData.map((r) => r.get({ plain: true }));
+    console.log(recipes);
+    res.render("recipes", { recipes });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-// GET one painting
-// Use the custom middleware before allowing the user to access the painting
-router.get('/painting/:id', withAuth, async (req, res) => {
+// get recipe by category
+router.get("/categories/:id", async (req, res) => {
   try {
-    const dbPaintingData = await Painting.findByPk(req.params.id);
+    const recipeData = await Recipe.findAll({
+      where: {
+        category_id: req.params.id,
+      },
+    });
+    if (!recipeData) {
+      res.status(404).json({ message: "No category found with that id!" });
+      return;
+    }
 
-    const painting = dbPaintingData.get({ plain: true });
-
-    res.render('painting', { painting, loggedIn: req.session.loggedIn });
+    res.status(200).json(recipeData);
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/login', (req, res) => {
+// get recipe by id
+router.get("/recipes/:id", async (req, res) => {
+  try {
+    const recipeData = await Recipe.findByPk(req.params.id, {});
+    if (!recipeData) {
+      res.status(404).json({ message: "No recipe found with that id!" });
+      return;
+    }
+    const recipe = recipeData.get({ plain: true });
+    console.log(recipe);
+    res.render("singlerecipe", { recipe });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;

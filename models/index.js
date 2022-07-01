@@ -1,13 +1,42 @@
-const User = require('./User');
-const Gallery = require('./Gallery');
-const Painting = require('./Painting');
+const User = require("./User");
+const Cookbook = require("./Cookbook");
+const Recipe = require("./Recipe");
+const Comment = require("./Comment");
+const UserCookbook = require("./UserCookbook");
+const Category = require("./Category");
 
-Gallery.hasMany(Painting, {
-  foreignKey: 'gallery_id',
+User.belongsToMany(Cookbook, {
+  through: {
+    model: UserCookbook,
+    unique: false,
+  },
 });
 
-Painting.belongsTo(Gallery, {
-  foreignKey: 'gallery_id',
+Cookbook.belongsToMany(User, {
+  through: {
+    model: UserCookbook,
+    unique: false,
+  },
 });
 
-module.exports = { User, Gallery, Painting };
+Cookbook.hasMany(Recipe, {
+  foreignKey: "cookbook_id",
+  onDelete: "CASCADE",
+});
+
+Recipe.hasMany(Comment, {
+  foreignKey: "recipe_id",
+  onDelete: "CASCADE",
+});
+
+User.hasMany(Comment, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
+Recipe.hasOne(Category, {
+  foreignKey: "recipe_id",
+  onDelete: "CASCADE",
+});
+
+module.exports = { User, Cookbook, Recipe, Comment, UserCookbook, Category };
