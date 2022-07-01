@@ -29,27 +29,6 @@
 
 }
 
-.cbname-font {
-  font-family: 'Lexend Deca', sans-serif;
-  font-weight: 200;
-  font-size: 16px;
-  color:teal;
-}
-
-.dropdown {
-  text-align:center;
-  text-align-last: center;
-  padding:10px;
-  border-radius:8px;
-  margin:10px;
-  border:none;
-  
-}
-
-.dropdown:active {
-  border:none;
-}
-
 #myTopnav {
   justify-content:space-evenly;
   position:static;
@@ -106,6 +85,31 @@ img {
   justify-content: space-evenly;
   text-align: center;
   padding: 20px;
+}
+
+.cb-title {
+  color: white;
+  background-color: teal;
+  padding:10px;
+}
+
+.cb-descr {
+  padding: 15px;
+}
+
+.dropdown-cb {
+  color:black;
+  background-color: white;
+  font-size:16px;
+  border:none;
+  text-align:center;
+  text-align-last: center;
+  margin:10px 0px;
+  width:90%;
+}
+
+.dropdown-cb select {
+  display: none; 
 }
 
 .add-recipe-btn {
@@ -183,7 +187,7 @@ img {
   margin-bottom:20px;
 }
 
-.fa-kitchen-set {
+.fa-kitchen-set, .fa-book-open{
   color: gray;
 }
 
