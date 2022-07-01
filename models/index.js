@@ -1,26 +1,10 @@
 const User = require("./User");
-const Cookbook = require("./Cookbook");
 const Recipe = require("./Recipe");
 const Comment = require("./Comment");
-const UserCookbook = require("./UserCookbook");
 const Category = require("./Category");
 
-User.belongsToMany(Cookbook, {
-  through: {
-    model: UserCookbook,
-    unique: false,
-  },
-});
-
-Cookbook.belongsToMany(User, {
-  through: {
-    model: UserCookbook,
-    unique: false,
-  },
-});
-
-Cookbook.hasMany(Recipe, {
-  foreignKey: "cookbook_id",
+User.hasMany(Recipe, {
+  foreignKey: "user_id",
   onDelete: "CASCADE",
 });
 
@@ -39,4 +23,4 @@ Recipe.hasOne(Category, {
   onDelete: "CASCADE",
 });
 
-module.exports = { User, Cookbook, Recipe, Comment, UserCookbook, Category };
+module.exports = { User, Recipe, Comment, Category };

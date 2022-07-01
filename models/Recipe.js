@@ -38,10 +38,10 @@ Recipe.init(
         key: "id",
       },
     },
-    cookbook_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "cookbook",
+        model: "user",
         key: "id",
       },
     },
