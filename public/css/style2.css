@@ -108,10 +108,6 @@ img {
   width:90%;
 }
 
-.dropdown-cb select {
-  display: none; 
-}
-
 .add-recipe-btn {
   color:white;
   background-color:rgb(237, 152, 67);
