@@ -11,13 +11,18 @@
 
     <h2 class="regular-font">Most recent recipes in the
       <br>
-      <span class="cbname-font">
-      {{ cookbook_name }} 
-      Rakonjac
+      
+        <select name="cookbook" class="dropdown">
+        <option value="{{ cookbook_name }}" class="cbname-font">
+      {{ cookbook_name }} cookbook1 </option>
+      <option value="{{ cookbook_name }}" class="cbname-font">King</option>
+      </select>
+      
+      </select>
       </span>
       <br>
       Cookbook
-      <br><br>
+      <br>
       <i class="fa-regular fa-heart"></i>
 
       <button type="submit" class="btn btn-block add-recipe-btn">
