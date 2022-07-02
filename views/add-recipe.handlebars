@@ -35,17 +35,17 @@
       <br>
       <div class="row">
         <div class="col-2"></div>
-<div class="col-4 regular-font">
+<div class="col-md-4 col-sm-12 regular-font">
       <img src="../assets/upload_photo_placeholder.webp" class="upload-img"><br>
       {{!-- CLOUDINARY WIDGET/LINK --}}
       <button type="upload" class="btn btn-md add-photo-btn">Add photo</button><br>
   
 </div>
 
-      <div class="col-4 regular-font">
+      <div class="col-md-4 col-sm-12 regular-font">
         <br><br>
-      <u>Ingredients:</u><br>
-        <span>
+      <u>Ingredients:</u>
+        <span class="responsive">
         <input type="text" class="note-textarea" id="add-ingredient" name="add-ingredient" placeholder="Enter ingredient">
         <button type="button" class="btn btn-sm recipe-btn">+</button></span>
         </input>
@@ -53,19 +53,19 @@
         <div><ul id="ingredient-text-area"></ul></div>
         <br>
 
-        <u>Directions:</u><br>
+        <u>Directions:</u>
         <input type="text" class="note-textarea" id="add-step" name="step" placeholder="Enter each step">
         <button type="button" class="btn btn-sm recipe-btn">+</button>
         </input>
         <br>
         <div><ol id="step-text-area"></ol></div>
         <br> 
-         <button type="upload" class="btn btn-md upload-btn">Upload Recipe</button>
-        </div>
+         
  
         <div class="col-2"></div>
        
-
+<button type="upload" class="btn btn-md upload-btn">Upload Recipe</button>
+        </div>
       </form>
       </div>
       {{!-- <div class="col-2"></div> --}}
