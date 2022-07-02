@@ -5,55 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Adding Recipe</title>
+    <title>Add your recipe</title>
 </head>
 <body>
   <div class="row">
     <div class="col-12">
-    <div class="add-recipe-title regular-font">
-      Add your recipe!
-      </div>
-      </div>
-    <div class="col-6 add-recipe-vp">
       
-  
-      <div class="dropdown">
-        <button class="dropbtn recipe-btn">Select Category</button>
+    <div class="add-recipe-vp">
+      <div>
+        <form action="#">
+    <input
+      class="recipe-title"
+      placeholder="recipe name"
+      maxlength="28"
+      type="text"/><br>
+        <textarea class="note-textarea description" placeholder="description of your recipe"></textarea>
+    </input><br>
+   
+    <div class="dropdown regular-font">
+        <button class="dropbtn-block" id="dropdownMenubutton">select a category</button>
         <div class="dropdown-content" id="category">
-          <a value="breakfast" href="#">breakfast</a>
+          <a class="selection" href="#">breakfast</a>
           <a href="#">sides</a>
           <a href="#">mains</a>
           <a href="#">desserts</a>
         </div>
       </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-2"></div>
+<div class="col-4 regular-font">
+      <img src="../assets/upload_photo_placeholder.webp" class="upload-img"><br>
+      {{!-- CLOUDINARY WIDGET/LINK --}}
+      <button type="upload" class="btn btn-md add-photo-btn">Add photo</button><br>
+  
+</div>
 
-      <form action="#">
-        <label for="recipe-name">Recipe Name:</label>
-        <input type="text" id="recipe-name" name="recipe-name"><br><br>
-
-         <label for="description">Recipe Description:</label>
-        <input type="text" id="description" name="description"><br><br>
-
-        <label for="add-ingredient">Add ingredient:</label>
-        <input type="text" id="add-ingredient" name="add-ingredient"><br><br>
-
-        <button type="button" class="btn btn-lg recipe-btn">Add ingredient</button>
-        
+      <div class="col-4 regular-font">
+        <br><br>
+      <u>Ingredients:</u><br>
+        <span>
+        <input type="text" class="note-textarea" id="add-ingredient" name="add-ingredient" placeholder="Enter ingredient">
+        <button type="button" class="btn btn-sm recipe-btn">+</button></span>
+        </input>
+        <br>
         <div><ul id="ingredient-text-area"></ul></div>
+        <br>
 
-        <button type="button" class="btn btn-lg recipe-btn">Add steps</button>
-
-        <label for="steps">Steps:</label>
-        <input type="text" id="add-step" name="step"><br><br> 
-
+        <u>Directions:</u><br>
+        <input type="text" class="note-textarea" id="add-step" name="step" placeholder="Enter each step">
+        <button type="button" class="btn btn-sm recipe-btn">+</button>
+        </input>
+        <br>
         <div><ol id="step-text-area"></ol></div>
-
-         <button type="upload" class="btn btn-lg recipe-btn">Upload Recipe</button>
+        <br> 
+         <button type="upload" class="btn btn-md upload-btn">Upload Recipe</button>
+        </div>
+ 
+        <div class="col-2"></div>
+       
 
       </form>
       </div>
+      {{!-- <div class="col-2"></div> --}}
 
-    <script src = "index.js"></script>
+    <script src="/js/upload.js"></script>
     
 </body>
 </html>

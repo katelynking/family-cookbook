@@ -10,7 +10,9 @@ const {
 // Import the custom middleware
 const withAuth = require("../utils/auth");
 
-router.get("/cookbook", withAuth, async (req, res) => {
+
+router.get("/cookbook", async (req, res) => {
+// router.get("/cookbook", withAuth, async (req, res) => {
   try {
     const cbData = await Recipe.findAll({
       // include: [{ model: Category }, { model: Comment }],
@@ -35,6 +37,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+
 router.get("/add-recipe", async (req, res) => {
   try {
     res.render("add-recipe");
@@ -44,7 +47,9 @@ router.get("/add-recipe", async (req, res) => {
   }
 });
 
-router.get("/recipes", withAuth, async (req, res) => {
+
+router.get("/recipes", async (req, res) => {
+// router.get("/recipes", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
       // include: [{ model: Category }, { model: Comment }],
@@ -62,7 +67,9 @@ router.get("/recipes", withAuth, async (req, res) => {
 });
 
 // get recipe by category
-router.get("/categories/:id", withAuth, async (req, res) => {
+
+router.get("/categories/:id", async (req, res) => {
+// router.get("/categories/:id", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
       where: {
@@ -80,7 +87,9 @@ router.get("/categories/:id", withAuth, async (req, res) => {
   }
 });
 
-router.get("/breakfast", withAuth, async (req, res) => {
+
+router.get("/breakfast", async (req, res) => {
+// router.get("/breakfast", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
       where: {
@@ -102,8 +111,11 @@ router.get("/breakfast", withAuth, async (req, res) => {
   }
 });
 
-router.get("/mains", withAuth, async (req, res) => {
+
+router.get("/mains", async (req, res) => {
   try {
+// router.get("/mains", withAuth, async (req, res) => {
+//   try {
     const recipeData = await Recipe.findAll({
       where: {
         category_id: 2,
@@ -125,8 +137,11 @@ router.get("/mains", withAuth, async (req, res) => {
   }
 });
 
-router.get("/sides", withAuth, async (req, res) => {
+
+router.get("/sides", async (req, res) => {
   try {
+// router.get("/sides", withAuth, async (req, res) => {
+//   try {
     const recipeData = await Recipe.findAll({
       where: {
         category_id: 3,
@@ -148,7 +163,9 @@ router.get("/sides", withAuth, async (req, res) => {
   }
 });
 
-router.get("/desserts", withAuth, async (req, res) => {
+
+router.get("/desserts", async (req, res) => {
+// router.get("/desserts", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
       where: {
