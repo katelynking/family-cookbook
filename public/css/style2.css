@@ -208,6 +208,10 @@ img {
   font-size:17px;
 }
 
+select:active {
+  background-color: white;
+}
+
 .add-recipe-btn {
   color:white;
   background-color:rgb(237, 152, 67);
@@ -305,6 +309,10 @@ img {
   margin-left:47%;
 }
 
+.card {
+  
+}
+
 /* LOGIN.HANDLEBARS*/
 
 
@@ -324,11 +332,19 @@ img {
   color:white;
 }
 
-.form-input-small {
-  font-size: 16px;
-  width: 50%;
+.login-cb-name {
+  color:rgb(59, 176, 199);
+
 }
 
+.page-title-login {
+  text-align:center;
+}
+
+.login-cb-name:hover {
+  text-decoration: none;
+  color:rgb(237, 152, 67);
+}
 
 
 

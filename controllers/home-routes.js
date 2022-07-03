@@ -11,8 +11,7 @@ const {
 const withAuth = require("../utils/auth");
 
 
-router.get("/cookbook", async (req, res) => {
-// router.get("/cookbook", withAuth, async (req, res) => {
+router.get("/cookbook", withAuth, async (req, res) => {
   try {
     const cbData = await Recipe.findAll({
       // include: [{ model: Category }, { model: Comment }],
@@ -38,7 +37,7 @@ router.get("/", async (req, res) => {
 });
 
 
-router.get("/add-recipe", async (req, res) => {
+router.get("/add-recipe", withAuth, async (req, res) => {
   try {
     res.render("add-recipe");
   } catch (err) {

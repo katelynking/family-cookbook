@@ -23,15 +23,20 @@
     </input><br>
    
     <div class="dropdown regular-font">
-        <button class="dropbtn-block" id="dropdownMenubutton">select a category</button>
+      <select class="dropbtn-block dropdown" id="dropdownMenubutton">select a category
         <div class="dropdown-content" id="category">
-          <a class="selection" href="#">breakfast</a>
-          <a href="#">sides</a>
-          <a href="#">mains</a>
-          <a href="#">desserts</a>
+          <option>select a category</option>
+          <option value="breakfast">breakfast</option>
+          <option value="sides">sides</option>
+          <option value="mains">mains</option>
+          <option value="desserts">desserts</option>
+          </select>
         </div>
       </div>
       <br>
+
+
+      
       <br>
       <div class="row">
         <div class="col-2"></div>
@@ -61,10 +66,11 @@
         <div><ol id="step-text-area"></ol></div>
         <br> 
          
- 
+ </div>
         <div class="col-2"></div>
-       
-<button type="upload" class="btn btn-md upload-btn">Upload Recipe</button>
+       <div class="col-12">
+<div class="col-md">
+<button type="upload" class="btn btn-md upload-btn regular-font">Upload Recipe</button>
         </div>
       </form>
       </div>

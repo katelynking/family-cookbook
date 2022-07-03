@@ -11,7 +11,7 @@
 
     <h2 class="regular-font">Most recent recipes in
       <br>the
-      {{!-- username --}}
+      {{ dbUserData.username }}
       <u>King</u>
       Cookbook
       <br><br>
@@ -26,7 +26,8 @@
       {{#each recipes}}
         {{> recipe_name}}
       {{/each}}
-      <a href="/recipes/1">Baklava <br></a>
+      <a href="/recipes/1">
+      Baklava <br></a>
       <br><br>...<br><br><br><br><br><br><br><br>
       <a href="/recipes/2">Paprikas <br></a>
       <a href="/recipes/3">Pečenja <br></a>

@@ -1,6 +1,27 @@
-<section class="card">
-  <header>{{recipe.recipe_name}}</header>
-  <div>{{recipe.description}}</div>
-  <div>{{recipe.ingredients}}</div>
-  <div>{{recipe.img_name}}</div>
-</section>
+<div class="col-12">
+<section class="recipe-card">
+  <header class="recipe-title">{{recipe.recipe_name}}</header>
+  <div class="regular-font">{{recipe.description}}</div>
+  <div class="regular-font">{{recipe.category}}category</div>
+
+  <div class="row">
+        <div class="col-2"></div>
+<div class="col-md-4 col-sm-12 regular-font">
+  {{!-- cloudinary image --}}
+  <img src="../assets/upload_photo_placeholder.webp" class="upload-img">{{recipe.img_name}}<br>
+  </div>
+
+<div class="col-md-4 col-sm-12 regular-font">
+        <br><br>
+
+  <div class="regular-font">{{recipe.ingredients}}</div>
+  <div class="regular-font">{{recipe.steps}}steps</div></div>
+<div class="col-12">
+<div class="col-md">
+<a class="btn btn-md add-recipe-btn regular-font" role="button" href="/add-recipe">
+      Add a recipe!
+      </a>
+      </section>
+      </div>
+      </div>
+      </div>
