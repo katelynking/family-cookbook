@@ -208,6 +208,16 @@ img {
   font-size:17px;
 }
 
+.category {
+  color:teal;
+  border-radius:8px;
+  font-size:17px;
+  font-style: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  letter-spacing:0.07em;
+}
+
+
 select:active {
   background-color: white;
 }
