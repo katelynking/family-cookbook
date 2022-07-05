@@ -66,23 +66,6 @@ const addIngredient = () => {
 };
 
 const addStep = () => {
-<<<<<<< HEAD
-    stepsArray.push(steps.value);
-    //append new ordered list item to stepTextArea.textContent
-    let newStep = document.createElement("li");
-    newStep.textContent = steps.value;
-    stepTextArea.appendChild(newStep);
-    //how do i make the input field clear once the step is pushed so the user can add a new step?
-}
-
-
-const uploadRecipe = (recipe) => 
-
-fetch("/recipes", { //we still need to make this POST route
-    method: 'POST',
-    body: JSON.stringify(recipe),
-});
-=======
   stepsArray.push(steps.value);
   //append new ordered list item to stepTextArea.textContent
   let newStep = document.createElement("li");
@@ -109,7 +92,6 @@ const uploadRecipe = async (recipe) => {
     alert("Failed to upload recipe.");
   }
 };
->>>>>>> 416d1119c2a041eec759733e7fd0cc5ee1a28e28
 
 // const uploadRecipe = (recipe) => console.log(recipe);
 
@@ -140,16 +122,6 @@ const handleRecipeUpload = () => {
   uploadRecipe(newRecipe);
 };
 
-<<<<<<< HEAD
-=======
-// $(".dropdown-menu li a").click(function(){
-
-//     $(this).parents(".btn-group").find('.selection').text($(this).text());
-//     $(this).parents(".btn-group").find('.selection').val($(this).text());
-
-//   });
-
->>>>>>> 416d1119c2a041eec759733e7fd0cc5ee1a28e28
 //add event listener for addIngredient button that pushes ingredients.value to ingredientsArray
 ingredientButton.addEventListener("click", addIngredient);
 

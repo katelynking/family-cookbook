@@ -74,17 +74,31 @@ router.get("/recipes", withAuth, async (req, res) => {
 
 router.post("/add-recipe", async (req, res) => {
   try {
-    const recipe = await Recipe.create({
-      recipe_name: req.body.recipe_name,
-      description: req.body.description,
-      ingredients: req.body.ingredients,
-      steps: req.body.steps,
-      img_name: req.body.img_name,
-      category_id: req.body.category_id,
-      user_id: req.session.user,
-    });
-
-    res.status(200).json(recipe);
+    console.log("imgname: ", req.body.img_name);
+    if (req.body.img_name === null) {
+      const recipe = await Recipe.create({
+        recipe_name: req.body.recipe_name,
+        description: req.body.description,
+        ingredients: req.body.ingredients,
+        steps: req.body.steps,
+        img_name:
+          "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
+        category_id: req.body.category_id,
+        user_id: req.session.user,
+      });
+      res.status(200).json(recipe);
+    } else {
+      const recipe = await Recipe.create({
+        recipe_name: req.body.recipe_name,
+        description: req.body.description,
+        ingredients: req.body.ingredients,
+        steps: req.body.steps,
+        img_name: req.body.img_name,
+        category_id: req.body.category_id,
+        user_id: req.session.user,
+      });
+      res.status(200).json(recipe);
+    }
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
