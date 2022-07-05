@@ -16,20 +16,21 @@
       <div>
         <form action="#">
     <input
+    id="recipe-title"
       class="recipe-title"
       placeholder="recipe name"
       maxlength="28"
       type="text"/><br>
-        <textarea class="note-textarea description" placeholder="description of your recipe"></textarea>
+        <textarea id="description" class="note-textarea description" placeholder="description of your recipe"></textarea>
     </input><br>
    
     <div class="dropdown regular-font">
-      <select class="dropbtn-block dropdown" id="dropdownMenubutton">select a category
-        <div class="dropdown-content" id="category">
+      <select id="category" class="dropbtn-block dropdown" id="dropdownMenubutton">select a category
+        <div class="dropdown-content" >
           <option>select a category</option>
           <option value="breakfast">breakfast</option>
-          <option value="sides">sides</option>
           <option value="mains">mains</option>
+          <option value="sides">sides</option>
           <option value="desserts">desserts</option>
           </select>
         </div>
@@ -54,7 +55,6 @@
         <span class="responsive">
         <input type="text" class="note-textarea" style="text-align:left;" id="add-ingredient" name="add-ingredient" placeholder="Enter ingredient">
         <button type="button" class="btn btn-sm recipe-btn" id="ingredient-button">+</button></span>
-        </input>
         <br>
         <div><ul id="ingredient-text-area"></ul></div>
         <br>
@@ -62,7 +62,6 @@
         <u>Directions:</u>
         <input type="text" class="note-textarea" style="text-align:left;" id="add-step" name="step" placeholder="Enter each step">
         <button type="button" class="btn btn-sm recipe-btn" id="step-button">+</button>
-        </input>
         <br>
         <div><ol id="step-text-area"></ol></div>
         <br> 
