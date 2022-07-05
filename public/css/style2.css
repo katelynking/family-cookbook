@@ -95,13 +95,36 @@ img {
   justify-content: space-evenly;
   text-align: center;
   padding: 10px;
+
+
+}
+
+.recipe-little-card {
+  position:relative;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 10px;
+  border:solid;
+  margin:5px;
+
 }
 
 .recipe-card-title {
   color: white;
   background-color: teal;
   padding:10px;
-  
+  font-family: 'Alata', sans-serif;
+  font-variant: all-small-caps;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+}
+
+
+
+.recipe-card-title:hover {
+  text-decoration: none;
+  color:white;
+  opacity:77%;
 }
 
 .recipe-btn {
@@ -115,8 +138,8 @@ img {
 }
 
 .upload-img {
-  height: 60%;
-  width: auto;
+  height: auto;
+  width: 60%;
   
 }
 
@@ -250,7 +273,7 @@ select:active {
 }
 
 .recipe-img {
-  width:300px;
+  width:400px;
   height:auto;
 }
 
