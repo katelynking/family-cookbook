@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">  </script>
     <link rel="stylesheet" href="index.css">
     <title>Add your recipe</title>
 </head>
@@ -41,9 +42,9 @@
       <div class="row">
         <div class="col-2"></div>
 <div class="col-md-4 col-sm-12 regular-font">
-      <img src="../assets/upload_photo_placeholder.webp" class="upload-img"><br>
+      <img src="../assets/upload_photo_placeholder.webp" class="upload-img" id="img-link"><br>
       {{!-- CLOUDINARY WIDGET/LINK --}}
-      <button type="upload" class="btn btn-md add-photo-btn">Add photo</button><br>
+      <button type="upload" class="btn btn-md add-photo-btn" id="upload_widget">Add photo</button><br>
   
 </div>
 

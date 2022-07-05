@@ -1,4 +1,4 @@
-
+cloudinary.setCloudName("rutgers-coding-bootcamp-group-3");
 //global variables to grab form data to use in post fetch request
 let recipeName;
 let description;
@@ -9,26 +9,53 @@ let steps;
 let stepButton;
 let stepTextArea;
 let category;
-// let imgFileName;
+let imgFileName;
 let uploadButton;
 let user;
+let imgLink;
 
 let ingredientsArray = []; //stores ingredients to be converted into unordered list for textArea and string for database
 let stepsArray = []; //stores steps to be converted into ordered list for textArea and string for database
 
 
-    recipeName = document.getElementById("recipe-title");
-    description = document.getElementById("description");
-    ingredients = document.getElementById("add-ingredient");
-    ingredientButton = document.getElementById("ingredient-button");
-    ingredientTextArea = document.getElementById("ingredient-text-area");
-    steps = document.getElementById("add-step");
-    stepButton = document.getElementById("step-button");
-    stepTextArea = document.getElementById("step-text-area");
-    category = document.getElementById("category");
-    // imgFileName = document.getElementById("image-file-name");
-    uploadButton = document.getElementById("upload-button");
-    user = document.getElementById("user");
+recipeName = document.getElementById("recipe-title");
+description = document.getElementById("description");
+ingredients = document.getElementById("add-ingredient");
+ingredientButton = document.getElementById("ingredient-button");
+ingredientTextArea = document.getElementById("ingredient-text-area");
+steps = document.getElementById("add-step");
+stepButton = document.getElementById("step-button");
+stepTextArea = document.getElementById("step-text-area");
+category = document.getElementById("category");
+// imgFileName = document.getElementById("image-file-name");
+uploadButton = document.getElementById("upload-button");
+user = document.getElementById("user");
+imgLink = document.getElementById("img-link");
+
+
+var myCropWidget = cloudinary.createUploadWidget({
+    cloudName: 'rutgers-coding-bootcamp-group-3',
+    uploadPreset: 'etukbfiu',
+    cropping: true,
+    sources: ["local", "url"]
+    // preBatch: (cb, data) => {
+    //     imgFileName = data.files[0].name;
+    //     console.log(imgFileName);
+    //     // add post route to update database with imgFileName for this recipe
+
+
+    //   },   
+},
+    (error, result) => {
+        if (result.event === "success") {
+            imgFileName = result.info.secure_url;
+            console.log(imgFileName);
+            imgLink.setAttribute("src", imgFileName);
+            // widget.close();
+        }
+    });
+
+
 
 
 const addIngredient = () => {
@@ -42,7 +69,7 @@ const addIngredient = () => {
     // how do i make the input field clear once the ingredient is pushed so the user can add a new ingredient?
 }
 
-const addStep = () => { 
+const addStep = () => {
     stepsArray.push(steps.value);
     //append new ordered list item to stepTextArea.textContent
     let newStep = document.createElement("li");
@@ -52,21 +79,24 @@ const addStep = () => {
 }
 
 
-// const uploadRecipe = (recipe) => fetch("/recipes", { //we still need to make this POST route
-//     method: 'POST',
-//     body: JSON.stringify(recipe),
-// });
+const uploadRecipe = (recipe) => 
 
-const uploadRecipe = (recipe) => console.log(recipe);
+fetch("/recipes", { //we still need to make this POST route
+    method: 'POST',
+    body: JSON.stringify(recipe),
+});
 
-const handleRecipeUpload = () => { 
+// const uploadRecipe = (recipe) => console.log(recipe);
+
+const handleRecipeUpload = () => {
     const newRecipe = {
         recipe_name: recipeName.value,
         description: description.value,
-        ingredients: ingredientsArray.join(", "), 
-        steps: stepsArray.join(", "), 
+        ingredients: ingredientsArray.join(", "),
+        steps: stepsArray.join(", "),
         category: category.value,
-        // user: user.value //i have no idea how to get this
+        img_name: imgFileName,
+      
     }
     uploadRecipe(newRecipe);
 }
@@ -80,3 +110,7 @@ stepButton.addEventListener("click", addStep);
 
 //add event listener for uploadRecipe button that calls uploadRecipe function
 uploadButton.addEventListener("click", handleRecipeUpload);
+
+document.getElementById("upload_widget").addEventListener("click", function () {
+    myCropWidget.open();
+}, false);

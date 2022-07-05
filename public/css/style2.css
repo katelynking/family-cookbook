@@ -95,6 +95,7 @@ img {
   justify-content: space-evenly;
   text-align: center;
   padding: 10px;
+
 }
 
 .recipe-card-title {
@@ -259,7 +260,7 @@ select:active {
 }
 
 .recipe-img {
-  width:300px;
+  width:400px;
   height:auto;
 }
 
