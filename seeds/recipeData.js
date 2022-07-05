@@ -6,7 +6,8 @@ const recipedata = [
     description: "description of Recipe1",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 1,
     user_id: 1,
   },
@@ -15,7 +16,8 @@ const recipedata = [
     description: "description of Recipe2",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 2,
     user_id: 1,
   },
@@ -24,7 +26,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 3,
     user_id: 1,
   },
@@ -33,7 +36,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 4,
     user_id: 1,
   },
@@ -42,7 +46,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 1,
     user_id: 2,
   },
@@ -51,7 +56,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 2,
     user_id: 2,
   },
@@ -60,7 +66,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 3,
     user_id: 2,
   },
@@ -69,7 +76,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 4,
     user_id: 2,
   },
@@ -78,7 +86,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 1,
     user_id: 3,
   },
@@ -87,7 +96,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 2,
     user_id: 3,
   },
@@ -96,7 +106,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 3,
     user_id: 3,
   },
@@ -105,7 +116,8 @@ const recipedata = [
     description: "description of Recipe3",
     ingredients: "ingredient 1, ingredient 2, ingredient 3",
     steps: "step 1, step 2, step 3",
-    img_name: "placeholder",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
     category_id: 4,
     user_id: 3,
   },

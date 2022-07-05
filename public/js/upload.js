@@ -122,7 +122,6 @@ const handleRecipeUpload = () => {
   uploadRecipe(newRecipe);
 };
 
-
 //add event listener for addIngredient button that pushes ingredients.value to ingredientsArray
 ingredientButton.addEventListener("click", addIngredient);
 
