@@ -11,8 +11,7 @@
 
     <h2 class="regular-font">Most recent recipes in
       <br>the
-      {{ dbUserData.username }}
-      <u>King</u>
+      <u>{{ dbUserData.username }}</u>
       Cookbook
       <br><br>
       <i class="fa-regular fa-heart"></i>
@@ -24,11 +23,13 @@
       {{!-- need to make an append list of recently added recipes? --}}
       <p class="recipe-list">
       {{#each recipes}}
+        <a href="/recipes/1">
         {{recipes.recipe_name}}
+        </a>
       {{/each}}
-      <a href="/recipes/1">
-      Baklava <br></a>
-      <br><br>...<br>
+      
+     <br></a>
+     
       
       </p>
       
