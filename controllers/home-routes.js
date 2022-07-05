@@ -10,7 +10,6 @@ const {
 // Import the custom middleware
 const withAuth = require("../utils/auth");
 
-
 router.get("/cookbook", withAuth, async (req, res) => {
   try {
     const cbData = await Recipe.findAll({
@@ -36,17 +35,14 @@ router.get("/", async (req, res) => {
   }
 });
 
-
 router.get("/add-recipe", withAuth, async (req, res) => {
   try {
-    res.render("add-recipe");
+    res.render("add-recipe", { loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
-
-
 
 router.get("/recipes", withAuth, async (req, res) => {
   try {
@@ -59,6 +55,27 @@ router.get("/recipes", withAuth, async (req, res) => {
     res
       .status(200)
       .render("recipes", { recipes, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.post("/recipes", withAuth, async (req, res) => {
+  try {
+    const recipe = await Recipe.create({
+      recipe_name: req.recipe_name,
+      description: req.description,
+      ingredients: req.ingredients,
+      steps: req.steps,
+      img_name: req.img_name,
+      category_id: req.category_id,
+      user_id: req.session.user,
+    });
+
+    res
+      .status(200)
+      .render("singlerecipe", { recipe, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -85,8 +102,6 @@ router.get("/categories/:id", withAuth, async (req, res) => {
   }
 });
 
-
-
 router.get("/breakfast", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
@@ -108,8 +123,6 @@ router.get("/breakfast", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 router.get("/mains", withAuth, async (req, res) => {
   try {
@@ -134,8 +147,6 @@ router.get("/mains", withAuth, async (req, res) => {
   }
 });
 
-
-
 router.get("/sides", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
@@ -158,8 +169,6 @@ router.get("/sides", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 router.get("/desserts", withAuth, async (req, res) => {
   try {
