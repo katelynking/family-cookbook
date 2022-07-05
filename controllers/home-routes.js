@@ -10,6 +10,7 @@ const {
 // Import the custom middleware
 const withAuth = require("../utils/auth");
 
+
 router.get("/cookbook", withAuth, async (req, res) => {
   try {
     const cbData = await Recipe.findAll({
@@ -35,7 +36,8 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/add-recipe", async (req, res) => {
+
+router.get("/add-recipe", withAuth, async (req, res) => {
   try {
     res.render("add-recipe");
   } catch (err) {
@@ -43,6 +45,8 @@ router.get("/add-recipe", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 router.get("/recipes", withAuth, async (req, res) => {
   try {
@@ -62,6 +66,7 @@ router.get("/recipes", withAuth, async (req, res) => {
 });
 
 // get recipe by category
+
 router.get("/categories/:id", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
@@ -79,6 +84,8 @@ router.get("/categories/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 router.get("/breakfast", withAuth, async (req, res) => {
   try {
@@ -101,6 +108,8 @@ router.get("/breakfast", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 router.get("/mains", withAuth, async (req, res) => {
   try {
@@ -125,6 +134,8 @@ router.get("/mains", withAuth, async (req, res) => {
   }
 });
 
+
+
 router.get("/sides", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
@@ -147,6 +158,8 @@ router.get("/sides", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 router.get("/desserts", withAuth, async (req, res) => {
   try {

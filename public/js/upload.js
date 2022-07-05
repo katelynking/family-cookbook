@@ -9,7 +9,7 @@ let steps;
 let stepButton;
 let stepTextArea;
 let category;
-let imgFileName;
+// let imgFileName;
 let uploadButton;
 let user;
 
@@ -17,7 +17,7 @@ let ingredientsArray = []; //stores ingredients to be converted into unordered l
 let stepsArray = []; //stores steps to be converted into ordered list for textArea and string for database
 
 
-    recipeName = document.getElementById("recipe-name");
+    recipeName = document.getElementById("recipe-title");
     description = document.getElementById("description");
     ingredients = document.getElementById("add-ingredient");
     ingredientButton = document.getElementById("ingredient-button");
@@ -26,7 +26,7 @@ let stepsArray = []; //stores steps to be converted into ordered list for textAr
     stepButton = document.getElementById("step-button");
     stepTextArea = document.getElementById("step-text-area");
     category = document.getElementById("category");
-    imgFileName = document.getElementById("image-file-name");
+    // imgFileName = document.getElementById("image-file-name");
     uploadButton = document.getElementById("upload-button");
     user = document.getElementById("user");
 
@@ -71,6 +71,13 @@ const handleRecipeUpload = () => {
     uploadRecipe(newRecipe);
 }
 
+
+// $(".dropdown-menu li a").click(function(){
+
+//     $(this).parents(".btn-group").find('.selection').text($(this).text());
+//     $(this).parents(".btn-group").find('.selection').val($(this).text());
+  
+//   });
 
 
 //add event listener for addIngredient button that pushes ingredients.value to ingredientsArray
