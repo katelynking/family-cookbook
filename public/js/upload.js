@@ -122,13 +122,6 @@ const handleRecipeUpload = () => {
   uploadRecipe(newRecipe);
 };
 
-// $(".dropdown-menu li a").click(function(){
-
-//     $(this).parents(".btn-group").find('.selection').text($(this).text());
-//     $(this).parents(".btn-group").find('.selection').val($(this).text());
-
-//   });
-
 //add event listener for addIngredient button that pushes ingredients.value to ingredientsArray
 ingredientButton.addEventListener("click", addIngredient);
 

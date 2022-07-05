@@ -20,7 +20,7 @@
               {{#if loggedIn}}
 
               <h2 class="page-title-login">
-              You are currently logged into the <a href="/cookbook" class="login-cb-name"> (cookbook name) {{ username }} </a>cookbook! <br>
+              You are currently logged into the <a href="/cookbook" class="login-cb-name"> {{{ loggedInUser.dataValues.username }}} </a>cookbook! <br>
                 <i class="fa-regular fa-heart"></i>
                 </h2>
               
@@ -44,11 +44,11 @@
                   <input class="form-input" type="password" id="password-signup" />
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-block join-btn" type="submit">Join</button>
+                  <button id class="btn btn-block join-btn" type="submit">Join</button>
                   
                 </div>
               </form>
-              <script src="./js/login.js"></script>
+              <script src="./js/frontPageSignUp.js"></script>
               {{/if}}
             </div>
         </div>
