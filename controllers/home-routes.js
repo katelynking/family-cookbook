@@ -61,21 +61,20 @@ router.get("/recipes", withAuth, async (req, res) => {
   }
 });
 
-router.post("/recipes", withAuth, async (req, res) => {
+router.post("/add-recipe", async (req, res) => {
   try {
+    console.log("post recipes");
     const recipe = await Recipe.create({
-      recipe_name: req.recipe_name,
-      description: req.description,
-      ingredients: req.ingredients,
-      steps: req.steps,
-      img_name: req.img_name,
-      category_id: req.category_id,
+      recipe_name: req.body.recipe_name,
+      description: req.body.description,
+      ingredients: req.body.ingredients,
+      steps: req.body.steps,
+      img_name: req.body.img_name,
+      category_id: req.body.category_id,
       user_id: req.session.user,
     });
 
-    res
-      .status(200)
-      .render("singlerecipe", { recipe, loggedIn: req.session.loggedIn });
+    res.status(200).json(recipe);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
