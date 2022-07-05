@@ -28,7 +28,18 @@ router.get("/cookbook", withAuth, async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    res.render("homepage", { loggedIn: req.session.loggedIn });
+    console.log(req.session.loggedIn);
+    if (req.session.loggedIn) {
+      console.log(req.session.user);
+      const loggedInUser = await User.findOne({
+        where: {
+          id: req.session.user,
+        },
+      });
+      res.render("homepage", { loggedInUser, loggedIn: req.session.loggedIn });
+    } else {
+      res.render("homepage", { loggedIn: req.session.loggedIn });
+    }
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -63,18 +74,31 @@ router.get("/recipes", withAuth, async (req, res) => {
 
 router.post("/add-recipe", async (req, res) => {
   try {
-    console.log("post recipes");
-    const recipe = await Recipe.create({
-      recipe_name: req.body.recipe_name,
-      description: req.body.description,
-      ingredients: req.body.ingredients,
-      steps: req.body.steps,
-      img_name: req.body.img_name,
-      category_id: req.body.category_id,
-      user_id: req.session.user,
-    });
-
-    res.status(200).json(recipe);
+    console.log("imgname: ", req.body.img_name);
+    if (req.body.img_name === null) {
+      const recipe = await Recipe.create({
+        recipe_name: req.body.recipe_name,
+        description: req.body.description,
+        ingredients: req.body.ingredients,
+        steps: req.body.steps,
+        img_name:
+          "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1657043328/upload_photo_placeholder_enoyit.webp",
+        category_id: req.body.category_id,
+        user_id: req.session.user,
+      });
+      res.status(200).json(recipe);
+    } else {
+      const recipe = await Recipe.create({
+        recipe_name: req.body.recipe_name,
+        description: req.body.description,
+        ingredients: req.body.ingredients,
+        steps: req.body.steps,
+        img_name: req.body.img_name,
+        category_id: req.body.category_id,
+        user_id: req.session.user,
+      });
+      res.status(200).json(recipe);
+    }
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -278,6 +302,7 @@ router.post("/users", async (req, res) => {
     // Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user = dbUserData.dataValues.id;
 
       res.status(200).json(dbUserData);
     });
