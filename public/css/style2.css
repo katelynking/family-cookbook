@@ -96,6 +96,17 @@ img {
   text-align: center;
   padding: 10px;
 
+
+}
+
+.recipe-little-card {
+  position:relative;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 10px;
+  border:solid;
+  margin:5px;
+
 }
 
 .recipe-card-title {
@@ -108,10 +119,12 @@ img {
   letter-spacing: 0.2em;
 }
 
+
+
 .recipe-card-title:hover {
   text-decoration: none;
   color:white;
-  opacity:77
+  opacity:77%;
 }
 
 .recipe-btn {
