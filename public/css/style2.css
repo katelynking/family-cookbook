@@ -101,7 +101,16 @@ img {
   color: white;
   background-color: teal;
   padding:10px;
-  
+  font-family: 'Alata', sans-serif;
+  font-variant: all-small-caps;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+}
+
+.recipe-card-title:hover {
+  text-decoration: none;
+  color:white;
+  opacity:77
 }
 
 .recipe-btn {
@@ -115,8 +124,8 @@ img {
 }
 
 .upload-img {
-  height: 60%;
-  width: auto;
+  height: auto;
+  width: 60%;
   
 }
 
