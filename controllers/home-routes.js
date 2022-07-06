@@ -74,6 +74,10 @@ router.get("/recipes", withAuth, async (req, res) => {
 
 router.post("/add-recipe", async (req, res) => {
   try {
+<<<<<<< HEAD
+=======
+    console.log("imgname: ", req.body.img_name);
+>>>>>>> 0658890e2b6022a18124f561ddff2a5c9f308e34
     if (req.body.img_name == "") {
       const recipe = await Recipe.create({
         recipe_name: req.body.recipe_name,
