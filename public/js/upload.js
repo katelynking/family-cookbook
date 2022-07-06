@@ -47,7 +47,7 @@ var myCropWidget = cloudinary.createUploadWidget(
   (error, result) => {
     if (result.event === "success") {
       imgFileName = result.info.secure_url;
-      console.log(imgFileName);
+      //   console.log(imgFileName);
       imgLink.setAttribute("src", imgFileName);
       // widget.close();
     }
@@ -60,7 +60,7 @@ const addIngredient = () => {
   let newIngredient = document.createElement("li");
   newIngredient.textContent = ingredients.value;
   ingredientTextArea.appendChild(newIngredient);
-  console.log(newIngredient);
+  //   console.log(newIngredient);
 
   // how do i make the input field clear once the ingredient is pushed so the user can add a new ingredient?
 };
@@ -75,8 +75,6 @@ const addStep = () => {
 };
 
 const uploadRecipe = async (recipe) => {
-  console.log("uploadRecipe called");
-
   const fetching = await fetch("/add-recipe", {
     //we still need to make this POST route
     method: "POST",
