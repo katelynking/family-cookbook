@@ -74,7 +74,6 @@ router.get("/recipes", withAuth, async (req, res) => {
 
 router.post("/add-recipe", async (req, res) => {
   try {
-    console.log("imgname: ", req.body.img_name);
     if (req.body.img_name == "") {
       const recipe = await Recipe.create({
         recipe_name: req.body.recipe_name,
@@ -138,7 +137,6 @@ router.get("/breakfast", withAuth, async (req, res) => {
       return;
     }
     const recipes = recipeData.map((r) => r.get({ plain: true }));
-
     res
       .status(200)
       .render("recipes", { recipes, loggedIn: req.session.loggedIn });
