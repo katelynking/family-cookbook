@@ -1,15 +1,16 @@
 <div class="col-12">
- 
-    <div class="col-md">
-      <div class="row recipe-card">
+      <div class="row justify-content-center cb-card">
+        
 {{#each recipes}} 
+<div class="col-lg-6 justify-content-center">
   <h2 class="d-flex justify-content-center">{{> recipe-details}}</h2>
 {{/each}}
+</div>
 
 </div>
 </div>
-</div>
-<div class="2"></div></div>
+
+{{!-- <div class="2"></div></div> --}}
 <div class="col-md" style="text-align:center;">
 <a class="btn btn-md add-recipe-btn regular-font" role="button" href="/add-recipe">
       Add a recipe!

@@ -23,7 +23,7 @@
       {{!-- need to make an append list of recently added recipes? --}}
       <p class="recipe-list">
       {{#each recipes}}
-        <a href="/recipes/1">
+        <a href="/recipes/{{id}}">
         {{recipes.recipe_name}}
         </a>
       {{/each}}
@@ -38,11 +38,13 @@
 
 
 
-<div class="col-9">
+<div class="col-lg-9">
   
   <div class="row cb-card">
+    
 {{#each books}}
   {{> cb-details}}
 {{/each}}
+</div>
 </div>
 </div>

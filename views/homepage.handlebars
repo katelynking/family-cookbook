@@ -1,7 +1,10 @@
-<main class="container">
-  <div id="display-imgs">
+
+<div class="row w-100">
+  <main class="container">
+  
+  <span id="display-imgs">
             <div class="marquee">
-                <span>
+                <span class="home-imgs">
                   
                 <img src="/assets/001.jpg">
                 <img src="/assets/002.jpg">
@@ -14,9 +17,9 @@
                 <img src="/assets/003.jpg">
               </span>
                 </div>
-          </div>
-          <div class="row">
-          <div class="col-3"><span id="sign-up-section">
+          </span>
+          <div class="col-12">
+          <div class="col-md-3"><span id="sign-up-section">
               {{#if loggedIn}}
 
               <h2 class="page-title-login">
@@ -26,7 +29,7 @@
               
 
               {{else}}
-              <h2 class="page-title">Sign up</h2>
+              <h2 class="page-title-sign-up">Sign up</h2><span class="hp-login-lg">
               or <a href="/login" class="login-link">login</a>
               <br>
               <br>
@@ -45,11 +48,13 @@
                 </div>
                 <div class="form-group">
                   <button id class="btn btn-block join-btn" type="submit">Join</button>
+                  </span>
                   
                 </div>
               </form>
               <script src="./js/frontPageSignUp.js"></script>
               {{/if}}
+            </div>
             </div>
         </div>
         </main>
