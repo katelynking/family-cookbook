@@ -466,9 +466,16 @@ figcaption {
   white-space: inherit;
   z-index: 2;
 }
+
+.marquee img {
+  object-fit:contain;
+  /* height: 100%;
+  width: auto; */
+  
+}
+
 .marquee span {
   list-style: none;
-  object-fit:contain;
   height: 100%;
   width:auto;
   display: flex;
