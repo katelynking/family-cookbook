@@ -468,6 +468,7 @@ figcaption {
 }
 .marquee span {
   list-style: none;
+  width:auto;
   height: 100%;
   display: flex;
   position:fixed;
