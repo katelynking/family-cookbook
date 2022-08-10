@@ -107,8 +107,8 @@ const handleRecipeUpload = () => {
   if (category.value === "desserts") {
     catValue = 4;
   }
-  const ingArrJoin = ingredientsArray.join(", ");
-  const stepArrJoin = stepsArray.join(", ");
+  const ingArrJoin = ingredientsArray.join('');
+  const stepArrJoin = stepsArray.join('');
   const newRecipe = {
     recipe_name: recipeName.value,
     description: description.value,
@@ -122,6 +122,7 @@ const handleRecipeUpload = () => {
 
 //add event listener for addIngredient button that pushes ingredients.value to ingredientsArray
 ingredientButton.addEventListener("click", addIngredient);
+
 
 //add event listener for addStep button that pushes steps.value to stepsArray
 stepButton.addEventListener("click", addStep);

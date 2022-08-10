@@ -119,11 +119,11 @@ img {
   text-align: center;
   padding: 15px;
   border: 1px solid rgba(233, 226, 226, 0.765);
-  border-radius: 50px;
+  /* border-radius: 50px; */
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   margin:5px;
   width:500px;
-  height:550px;
+  height:450px;
 
 }
 
@@ -196,7 +196,7 @@ img {
 
 .cb-card {
   position:relative;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
   padding: 20px;
   border-radius:10px;
@@ -315,9 +315,10 @@ select:active {
 }
 
 .recipe-img {
-  width: 400px;
+  width: 430px;
   height: 300px;
   object-fit: cover;
+  
 }
 
 
@@ -384,6 +385,23 @@ select:active {
 .cb-quote {
   margin-left:47%;
 }
+
+figure {
+  margin:0px;
+  position:relative;
+}
+
+figcaption {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  color:white;
+  font-size: 2vw;
+  text-align: right;
+  right: 5%;
+  font-family: 'Lexend Deca';
+}
+
 
 #ingredient-text-area,
 #step-text-area {
