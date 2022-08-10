@@ -123,7 +123,7 @@ img {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   margin:5px;
   width:500px;
-  height:450px;
+  height:550px;
 
 }
 
@@ -468,8 +468,8 @@ figcaption {
 }
 .marquee span {
   list-style: none;
-  width:auto;
   height: 100%;
+  width:auto;
   display: flex;
   position:fixed;
   left: 100%;
