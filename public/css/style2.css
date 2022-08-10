@@ -468,9 +468,9 @@ figcaption {
 }
 
 .marquee img {
-  object-fit:contain;
-  /* height: 100%;
-  width: auto; */
+  /* object-fit:contain; */
+  height: 100%;
+  width: auto;
   
 }
 
