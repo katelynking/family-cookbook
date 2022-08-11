@@ -106,8 +106,8 @@ img {
 .recipe-card {
   position:relative;
   justify-content: space-evenly;
-  text-align: center;
-  padding: 10px;
+  /* text-align: center; */
+  padding: 0px;
   display:block;
 
 
@@ -116,26 +116,32 @@ img {
 .recipe-little-card {
   position:relative;
   justify-content: space-evenly;
-  text-align: center;
-  padding: 15px;
+  /* text-align: center; */
+  padding: 0px;
   border: 1px solid rgba(233, 226, 226, 0.765);
   /* border-radius: 50px; */
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  margin:5px;
-  width:500px;
-  height:550px;
+  margin:2%;
+  width:432px;
+  height:500px;
 
 }
 
+.recipe-little-card a:hover {
+  text-decoration: none;
+}
+
+
 .recipe-card-title {
-  color: white;
-  background-color: teal;
-  padding: 0px 5px 5px 5px;
+  /* color: white; */
+  color: teal;
+  padding: 15px;
   font-family: 'Alata', sans-serif;
+  font-weight:600;
   font-variant: all-small-caps;
-  
-  font-size: 30px;
-  letter-spacing: 0.2em;
+  line-height:35px;
+  font-size: 32px;
+  letter-spacing: 0.1em;
   
 }
 
@@ -143,8 +149,7 @@ img {
 
 .recipe-card-title:hover {
   text-decoration: none;
-  color:white;
-  opacity:77%;
+  /* opacity:77%; */
 }
 
 .recipe-btn {
@@ -203,7 +208,18 @@ img {
 }
 
 .cb-descr {
-  padding: 15px;
+  display:block;
+  padding-left:15px;
+  font-family:'Lexend Deca';
+  font-weight:200;
+  font-size:20px;
+  letter-spacing:0.1em;
+  text-align:left;
+  color: black;
+}
+
+.cb-descr:hover {
+  text-decoration:none;
 }
 
 .description {
@@ -294,6 +310,16 @@ select:active {
 }
 
 .add-recipe-btn:hover {
+  color:white;
+}
+
+.remove-recipe-btn {
+  color:white;
+  background-color:rgb(153, 9, 9);
+  margin-bottom:20px;
+}
+
+.remove-recipe-btn:hover {
   color:white;
 }
 
@@ -392,14 +418,17 @@ figure {
 }
 
 figcaption {
-  width: 100%;
+  width: 55%;
   position: absolute;
   bottom: 2rem;
-  color:white;
-  font-size: 2vw;
+  color:rgb(47, 46, 46);
+  font-size: 1.5vw;
   text-align: right;
-  right: 5%;
+  margin-left:40%;
+  padding:2%;
   font-family: 'Lexend Deca';
+  background-color:rgba(253, 252, 250, 0.717);
+  
 }
 
 
@@ -468,7 +497,6 @@ figcaption {
 }
 
 .marquee img {
-  /* object-fit:contain; */
   height: 100%;
   width: auto;
   
