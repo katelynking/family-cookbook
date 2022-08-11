@@ -81,6 +81,11 @@
   text-decoration: none;
 }
 
+
+.navbar.navbar-2 .navbar-toggler-icon {
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+}
+
 .user-access {
   float: right;
   color: rgb(0, 0, 0);
@@ -232,7 +237,7 @@ img {
 
 .description {
   width:50%;
-  margin-top:20px;
+  /* margin-top:20px; */
 
 }
 
