@@ -55,6 +55,14 @@
 
 }
 
+.regular-font-2 {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight:200;
+  letter-spacing: 0.1em;
+  font-size:2.5vh;
+
+}
+
 #myTopnav {
   justify-content:space-evenly;
   position:static;
