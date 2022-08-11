@@ -82,8 +82,8 @@
 }
 
 
-.navbar.navbar-2 .navbar-toggler-icon {
-  background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+.navbar.navbar-6 .navbar-toggler-icon {
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger8.svg?color=E3005C');
 }
 
 .user-access {
@@ -271,7 +271,7 @@ img {
   font-family: 'Alata', sans-serif;
   font-variant: all-small-caps;
   letter-spacing: 0.07em;
-  margin:5px;
+  margin:2px;
  
 }
 
