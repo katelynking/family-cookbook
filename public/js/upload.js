@@ -11,7 +11,6 @@ let stepTextArea;
 let category;
 let imgFileName = "";
 let uploadButton;
-let deleteButton;
 let user;
 let imgLink;
 
@@ -29,7 +28,6 @@ stepTextArea = document.getElementById("step-text-area");
 category = document.getElementById("category");
 // imgFileName = document.getElementById("image-file-name");
 uploadButton = document.getElementById("upload-button");
-deleteButton = document.getElementById('delete-button');
 user = document.getElementById("user");
 imgLink = document.getElementById("img-link");
 
@@ -132,7 +130,6 @@ stepButton.addEventListener("click", addStep);
 //add event listener for uploadRecipe button that calls uploadRecipe function
 uploadButton.addEventListener("click", handleRecipeUpload);
 
-deleteButton.addEventListener("click", deleteRecipe);
 
 document.getElementById("upload_widget").addEventListener("click", function () {
   myCropWidget.open();
