@@ -237,7 +237,7 @@ img {
 
 .description {
   width:50%;
-  margin-top:20px;
+  margin-top:10px;
 
 }
 
@@ -283,7 +283,7 @@ img {
   font-variant: all-small-caps;
   letter-spacing: 0.07em;
   display:contents;
-  margin: 2px;
+  /* margin: 2px; */
 }
 
 .dropdown {
