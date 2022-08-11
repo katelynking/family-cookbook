@@ -18,8 +18,16 @@ router.get("/cookbook", withAuth, async (req, res) => {
         user_id: req.session.user,
       },
     });
+    
     const books = cbData.map((r) => r.get({ plain: true }));
-    res.render("homepage-cb", { books, loggedIn: req.session.loggedIn });
+
+    const loggedInUser = await User.findOne({
+      where: {
+        id: req.session.user,
+      },
+    });
+
+    res.render("homepage-cb", { books, loggedInUser, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
