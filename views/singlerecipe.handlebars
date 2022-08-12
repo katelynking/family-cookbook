@@ -20,9 +20,10 @@
   {{!-- cloudinary image --}}
   <img src={{recipe.img_name}} class="upload-img" style="margin-top:3%;"><br>
   <br>
+  
   </div>
 
-<div class="col-lg-4 col-sm-8 regular-font">
+<div class="col-lg-4 col-sm-8 regular-font" style="posiiton:relative;">
    <div class="add-recipe-vp">
         <br>
 
@@ -37,37 +38,44 @@
     <u>Directions:</u> 
   <br>
   <span class="note-textarea" style="text-align:left;">
-  {{recipe.steps}}</div></div></span>
-
-  
+  {{recipe.steps}}
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>
+  </div>
   </span>
   </form>
-<br>
-
+  {{!-- <div style="font-decoration:underline; font-size:2vh; bottom:2em; right:0; position:absolute;">
+    <a href="/" id="edit-button">Edit</a> | 
+    <a href="/" id="delete-button">Delete</a> 
+    </div> --}}
   </div>
+  
 
+
+  
+  
+<span class="col-md-8">
 
 
   <br>
   <br>
-<div class="col-12">
-<div class="col-md">
-  <br> <br>
 
 
 
-<a class="btn btn-md add-recipe-btn regular-font" role="button" href="/add-recipe">
+{{!-- <a class="btn btn-md add-recipe-btn regular-font" role="button" href="/add-recipe">
       Add a recipe!
-      </a>
+      </a> --}}
 
-{{!-- <span style="float:right;">
-    <a href="/" id="delete-button"><i class="fa-solid fa-trash-can"></i></a> 
-      <a href="/" id="edit-button"><i class="fa-solid fa-pencil"></i></a> --}}
+
   
 
       
       </section>
-      </div>
-      </div>
+      {{!-- </div>
+      </div> --}}
       </div>
       </div>
