@@ -1,5 +1,6 @@
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Family Cookbook</title>
 
 
@@ -63,17 +64,24 @@
     
  
 
-    <nav class="navbar" id="myTopnav">
+    <nav class="nav-bar" id="myTopnav">
+      <div class = "hamburger">
+        <span class = "bar"></span>
+        <span class = "bar"></span>
+        <span class = "bar"></span>
+      </div>
+      
+      <ul class = "nav-menu">
+      <li class="nav-item"><a class = "nav-link" href="/cookbook">all recipes</a></li>
+      <li class="nav-item"><a class = "nav-link" href="/breakfast">breakfast</a> </li>
+      <li class="nav-item"><a class = "nav-link" href="/mains">mains</a> </li>
+      <li class="nav-item"><a class = "nav-link" href="/sides">sides</a></li>
+      <li class="nav-item"><a class = "nav-link" href="/desserts">desserts</a></li>
+      {{!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a> --}}
+      </ul>
 
-      <a href="/cookbook">all recipes</a> 
-      <a href="/breakfast">breakfast</a> 
-      <a href="/mains">mains</a> 
-      <a href="/sides">sides</a>
-      <a href="/desserts">desserts</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
-    
+      
     </nav>
-    </div>
  
   <main>
     <body>
@@ -84,6 +92,7 @@
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="/js/menu.js"></script>
 </body>
 
 
