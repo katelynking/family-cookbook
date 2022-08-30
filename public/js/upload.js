@@ -60,6 +60,7 @@ const addIngredient = () => {
   let newIngredient = document.createElement("li");
   newIngredient.textContent = ingredients.value;
   ingredientTextArea.appendChild(newIngredient);
+  
   //   console.log(newIngredient);
 
   // how do i make the input field clear once the ingredient is pushed so the user can add a new ingredient?
@@ -107,8 +108,8 @@ const handleRecipeUpload = () => {
   if (category.value === "desserts") {
     catValue = 4;
   }
-  const ingArrJoin = ingredientsArray.join(", ");
-  const stepArrJoin = stepsArray.join(", ");
+  const ingArrJoin = ingredientsArray.join('');
+  const stepArrJoin = stepsArray.join('');
   const newRecipe = {
     recipe_name: recipeName.value,
     description: description.value,
@@ -123,11 +124,13 @@ const handleRecipeUpload = () => {
 //add event listener for addIngredient button that pushes ingredients.value to ingredientsArray
 ingredientButton.addEventListener("click", addIngredient);
 
+
 //add event listener for addStep button that pushes steps.value to stepsArray
 stepButton.addEventListener("click", addStep);
 
 //add event listener for uploadRecipe button that calls uploadRecipe function
 uploadButton.addEventListener("click", handleRecipeUpload);
+
 
 document.getElementById("upload_widget").addEventListener("click", function () {
   myCropWidget.open();

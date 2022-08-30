@@ -7,25 +7,25 @@
           {{recipe.recipe_name}}
           </div>
           
-          <div class="note-textarea description" style="width:auto;">
+          <div class="note-textarea description" style="width:auto; padding:15px 120px; text-align:center; justify-content:center;">
             {{recipe.description}}</div>
             </span>
         <br>
   
-  <br>
-  <br>
 
-  <div class="row">
-        <div class="col-2"></div>
-<div class="col-md-4 col-sm-12 regular-font">
+
+  <div class="row justify-content-center">
+        {{!-- <div class="col-12 justify-content-center"> --}}
+<div class="col-lg-4 col-sm-8 regular-font">
   {{!-- cloudinary image --}}
   <img src={{recipe.img_name}} class="upload-img" style="margin-top:3%;"><br>
   <br>
+  
   </div>
 
-<div class="col-md-4 col-sm-12 regular-font">
+<div class="col-lg-4 col-sm-8 regular-font" style="posiiton:relative;">
    <div class="add-recipe-vp">
-        <br><br>
+        <br>
 
   <div class="regular-font" style="text-align:left;">
     <u>Ingredients:</u> 
@@ -38,19 +38,44 @@
     <u>Directions:</u> 
   <br>
   <span class="note-textarea" style="text-align:left;">
-  {{recipe.steps}}</div></div></span>
-  </form>
+  {{recipe.steps}}
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   </div>
+  </div>
+  </span>
+  </form>
+  {{!-- <div style="font-decoration:underline; font-size:2vh; bottom:2em; right:0; position:absolute;">
+    <a href="/" id="edit-button">Edit</a> | 
+    <a href="/" id="delete-button">Delete</a> 
+    </div> --}}
+  </div>
+  
+
+
+  
+  
+<span class="col-md-8">
+
+
   <br>
   <br>
-<div class="col-12">
-<div class="col-md">
-  <br> <br>
-<a class="btn btn-md add-recipe-btn regular-font" role="button" href="/add-recipe">
+
+
+
+{{!-- <a class="btn btn-md add-recipe-btn regular-font" role="button" href="/add-recipe">
       Add a recipe!
-      </a>
+      </a> --}}
+
+
+  
+
+      
       </section>
-      </div>
-      </div>
+      {{!-- </div>
+      </div> --}}
       </div>
       </div>

@@ -17,7 +17,7 @@
         <form action="#">
     <input
     id="recipe-title"
-      class="recipe-title"
+      class="recipe-title-add"
       placeholder="recipe name"
       maxlength="28"
       type="text"/><br>
@@ -40,34 +40,33 @@
 
       
       <br>
-      <div class="row">
-        <div class="col-2"></div>
-<div class="col-md-4 col-sm-12 regular-font">
-      <img src="../assets/upload_photo_placeholder.webp" class="upload-img" id="img-link"><br>
+      <div class="row justify-content-center">
+        <div class="col-12"></div>
+<div class="col-lg-4 col-sm-8 regular-font">
+      <img src="../assets/upload_photo_placeholder.webp" class="upload-img smaller-img" id="img-link"><br><br>
       {{!-- CLOUDINARY WIDGET/LINK --}}
       <button type="upload" class="btn btn-md add-photo-btn" id="upload_widget">Add photo</button><br>
   
 </div>
 
-      <div class="col-md-4 col-sm-12 regular-font">
-        <br><br>
+      <div class="col-lg-4 col-sm-8 regular-font add-recipe-vp">
       <u>Ingredients:</u>
         <span class="responsive">
-        <input type="text" class="note-textarea" style="text-align:left;" id="add-ingredient" name="add-ingredient" placeholder="Enter ingredient">
+        <input type="text" class="note-textarea" style="text-align:left;" id="add-ingredient" name="add-ingredient" placeholder="Enter ingredient"
+        onClick="(this.value='')" >
         <button type="button" class="btn btn-sm recipe-btn" id="ingredient-button">+</button></span>
         <br>
         <div><ul id="ingredient-text-area"></ul></div>
         <br>
 
         <u>Directions:</u>
-        <input type="text" class="note-textarea" style="text-align:left;" id="add-step" name="step" placeholder="Enter each step">
+        <input type="text" class="note-textarea" style="text-align:left;" id="add-step" name="step" placeholder="Enter each step" onClick="(this.value='')">
         <button type="button" class="btn btn-sm recipe-btn" id="step-button">+</button>
         <br>
         <div><ol id="step-text-area"></ol></div>
         <br> 
          
  </div>
-        <div class="col-2"></div>
        <div class="col-12">
 <div class="col-md">
 <button type="upload" class="btn btn-md upload-btn regular-font" id="upload-button">Upload Recipe</button>

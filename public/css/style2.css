@@ -6,7 +6,7 @@
   font-family: 'Lexend Deca', sans-serif;
   font-weight:200;
   color:rgb(0, 0, 0);
-  font-size: 30px;
+  font-size: 4.2vh;
   margin:15px;
 }
 
@@ -18,8 +18,17 @@
   text-decoration: none;
 }
 
+.page-title-sign-up {
+  font-size: 5vh;
+}
+
+.hp-login-lg {
+  font-size: 2vh;
+}
+
 .login-link {
   color: rgb(59, 176, 199);
+  
 }
 
 .login-link:hover {
@@ -42,18 +51,26 @@
   font-family: 'Lexend Deca', sans-serif;
   font-weight:200;
   letter-spacing: 0.1em;
-  font-size:20px;
+  font-size:3vh;
+
+}
+
+.regular-font-2 {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight:200;
+  letter-spacing: 0.1em;
+  font-size:2.5vh;
 
 }
 
 #myTopnav {
   justify-content:space-evenly;
-  position:static;
+  /* position:static; */
 }
 
 #myTopnav a {
   font-family: 'Alata', sans-serif;
-  font-variant:small-caps;
+  font-variant:all-small-caps;
   color:black;
   letter-spacing: 0.3em;
   
@@ -62,6 +79,11 @@
 #myTopnav a:hover {
   color:rgb(237, 152, 67);
   text-decoration: none;
+}
+
+
+.navbar.navbar-6 .navbar-toggler-icon {
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger8.svg?color=E3005C');
 }
 
 .user-access {
@@ -90,11 +112,16 @@ img {
   height:auto;
 }
 
+/* .home-imgs {
+  height:10vh;
+} */
+
 .recipe-card {
   position:relative;
   justify-content: space-evenly;
-  text-align: center;
-  padding: 10px;
+  /* text-align: center; */
+  padding: 0px;
+  display:block;
 
 
 }
@@ -102,30 +129,40 @@ img {
 .recipe-little-card {
   position:relative;
   justify-content: space-evenly;
-  text-align: center;
-  padding: 10px;
-  border:solid;
-  margin:5px;
-  width:500px;
+  /* text-align: center; */
+  padding: 0px;
+  border: 1px solid rgba(233, 226, 226, 0.765);
+  /* border-radius: 50px; */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin:2%;
+  width:432px;
+  height:500px;
 
 }
 
+.recipe-little-card a:hover {
+  text-decoration: none;
+}
+
+
 .recipe-card-title {
-  color: white;
-  background-color: teal;
-  padding:10px;
+  /* color: white; */
+  color: teal;
+  padding: 15px;
   font-family: 'Alata', sans-serif;
+  font-weight:600;
   font-variant: all-small-caps;
-  font-size: 20px;
-  letter-spacing: 0.2em;
+  line-height:35px;
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  
 }
 
 
 
 .recipe-card-title:hover {
   text-decoration: none;
-  color:white;
-  opacity:77%;
+  /* opacity:77%; */
 }
 
 .recipe-btn {
@@ -139,9 +176,15 @@ img {
 }
 
 .upload-img {
+  width: 100%;
   height: auto;
-  width: 200px;
   
+}
+
+.smaller-img {
+  width: 60%;
+  height: auto;
+  margin-top: 0px;
 }
 
 .upload-btn {
@@ -157,7 +200,7 @@ img {
 .add-photo-btn {
   background-color:rgb(237, 152, 67);
   color:white;
-  /* margin:10px 0px; */
+  margin-bottom: 15%;
   font-style:'Alata', sans-serif;
   font-weight:500;
   border-radius:8px;
@@ -166,23 +209,35 @@ img {
 
 .cb-card-sm {
   border-radius: 10px;
+
 }
 
 .cb-card {
   position:relative;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
   padding: 20px;
   border-radius:10px;
 }
 
 .cb-descr {
-  padding: 15px;
+  display:block;
+  padding-left:15px;
+  font-family:'Lexend Deca';
+  font-weight:200;
+  font-size:20px;
+  letter-spacing:0.1em;
+  text-align:left;
+  color: black;
+}
+
+.cb-descr:hover {
+  text-decoration:none;
 }
 
 .description {
   width:50%;
-  padding-top:20px;
+  margin-top:10px;
 
 }
 
@@ -191,7 +246,8 @@ img {
 }
 
 .note-textarea,
-.recipe-title {
+.recipe-title,
+.recipe-title-add {
   color: #000000;
   outline: none;
   border: none;
@@ -200,7 +256,7 @@ img {
 
 .note-textarea {
   resize: none;
-  font-size: 16px;
+  font-size: 2.3vh;
   /* padding: 20px 0px; */
   font-family: 'Lexend Deca', sans-serif;
   font-weight:200;
@@ -208,19 +264,35 @@ img {
 
 }
 
-.recipe-title {
+.recipe-title-add {
   width:100%;
-  height: 50px;
-  font-size: 3rem;
+  /* height: 7vh; */
+  font-size: 5vh;
   font-family: 'Alata', sans-serif;
   font-variant: all-small-caps;
   letter-spacing: 0.07em;
+  margin:2px;
+ 
+}
+
+.recipe-title {
+  width:100%;
+  /* height: 7vh; */
+  font-size: 5vh;
+  font-family: 'Alata', sans-serif;
+  font-variant: all-small-caps;
+  letter-spacing: 0.07em;
+  display:contents;
+  /* margin: 2px; */
 }
 
 .dropdown {
   align-items: center;
   font-size:16px;
+  text-align:center;
 }
+
+
 
 #dropdownMenubutton {
   color:teal;
@@ -250,14 +322,25 @@ select:active {
   color:white;
   background-color:rgb(237, 152, 67);
   margin-bottom:20px;
+  font-size: 3vh;
 }
 
 .add-recipe-btn:hover {
   color:white;
 }
 
+.remove-recipe-btn {
+  color:white;
+  background-color:rgb(153, 9, 9);
+  margin-bottom:20px;
+}
+
+.remove-recipe-btn:hover {
+  color:white;
+}
+
 .add-recipe-vp {
-  margin: 10px;
+  margin-right: 5%;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -274,9 +357,10 @@ select:active {
 }
 
 .recipe-img {
-  width: 400px;
+  width: 430px;
   height: 300px;
   object-fit: cover;
+  
 }
 
 
@@ -312,9 +396,9 @@ select:active {
 #sign-up-section {
   position:absolute;
   z-index: 1;
-  margin:15%;
+  margin:3vh 0vw;
   border:solid;
-  border-radius:50px;
+  border-radius:20px;
   border-color: lightgray;
   padding:25%;
   box-shadow: 0px 3px 80px white;
@@ -344,8 +428,33 @@ select:active {
   margin-left:47%;
 }
 
-.card {
+figure {
+  margin:0px;
+  position:relative;
+}
+
+figcaption {
+  width: 27%;
+  position: absolute;
+  top: 15%;
+  color:rgb(47, 46, 46);
+  font-size: 1.8vw;
+  text-align: center;
+  margin-left:4%;
+  padding:2%;
+  font-family: 'Lexend Deca';
+  font-weight: 200;
+  background-color:rgba(253, 252, 250, 0.844);
+  border:2px solid teal;
+  box-shadow:0 0 0 1em rgba(253, 252, 250, 0.844);
   
+}
+
+
+#ingredient-text-area,
+#step-text-area {
+  text-align:left;
+  margin-left:15%;
 }
 
 /* LOGIN.HANDLEBARS*/
@@ -374,6 +483,7 @@ select:active {
 
 .page-title-login {
   text-align:center;
+  font-size: 6vh;
 }
 
 .login-cb-name:hover {
@@ -404,9 +514,17 @@ select:active {
   white-space: inherit;
   z-index: 2;
 }
+
+.marquee img {
+  height: 100%;
+  width: auto;
+  
+}
+
 .marquee span {
   list-style: none;
   height: 100%;
+  width:auto;
   display: flex;
   position:fixed;
   left: 100%;

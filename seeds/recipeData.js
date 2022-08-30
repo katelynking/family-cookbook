@@ -121,6 +121,16 @@ const recipedata = [
     category_id: 4,
     user_id: 1,
   },
+  {
+    recipe_name: "Proja",
+    description: "Serbian cornbread",
+    ingredients: "3 eggs \n2 cups vegetable oil \n4 cups milk \n4 cups cornmeal (yellow) \n3 cups flour \n1 tsp baking powder \n1 tsp salt",
+    steps: "1. Mix ingredients in bowl \n2. Pour mix into baking dish \n3. Bake at 400° for 35 min",
+    img_name:
+      "https://res.cloudinary.com/rutgers-coding-bootcamp-group-3/image/upload/v1659158345/proja.jpg",
+    category_id: 3,
+    user_id: 3,
+  },
 ];
 
 const seedRecipes = () => Recipe.bulkCreate(recipedata);
