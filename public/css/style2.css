@@ -65,7 +65,7 @@
 
 #myTopnav {
   justify-content:space-evenly;
-  position:static;
+  /* position:static; */
 }
 
 #myTopnav a {
@@ -137,16 +137,6 @@ img {
   margin:2%;
   width:432px;
   height:500px;
-
-}
-
-.add-little-card {
-  margin:2%;
-  width:432px;
-  height:500px;
-  position:relative;
-  justify-content: space-evenly;
-  padding: 0px;
 
 }
 
@@ -408,7 +398,7 @@ select:active {
   z-index: 1;
   margin:3vh 0vw;
   border:solid;
-  /* border-radius:50px; */
+  border-radius:20px;
   border-color: lightgray;
   padding:25%;
   box-shadow: 0px 3px 80px white;
@@ -454,9 +444,9 @@ figcaption {
   padding:2%;
   font-family: 'Lexend Deca';
   font-weight: 200;
-  background-color:rgba(253, 252, 250, 0.717);
+  background-color:rgba(253, 252, 250, 0.844);
   border:2px solid teal;
-  box-shadow:0 0 0 1em rgba(253, 252, 250, 0.717);
+  box-shadow:0 0 0 1em rgba(253, 252, 250, 0.844);
   
 }
 

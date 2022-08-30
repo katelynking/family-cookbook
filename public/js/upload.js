@@ -60,6 +60,7 @@ const addIngredient = () => {
   let newIngredient = document.createElement("li");
   newIngredient.textContent = ingredients.value;
   ingredientTextArea.appendChild(newIngredient);
+  
   //   console.log(newIngredient);
 
   // how do i make the input field clear once the ingredient is pushed so the user can add a new ingredient?
