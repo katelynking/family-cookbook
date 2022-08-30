@@ -1,5 +1,6 @@
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Family Cookbook</title>
 
 
@@ -63,6 +64,7 @@
     
  
 
+
     <div class="navbar" id="myTopnav">
 
       <a href="/cookbook">all recipes</a> 
@@ -74,6 +76,26 @@
     
     {{!-- </nav> --}}
     </div>
+
+    <nav class="nav-bar" id="myTopnav">
+      <div class = "hamburger">
+        <span class = "bar"></span>
+        <span class = "bar"></span>
+        <span class = "bar"></span>
+      </div>
+      
+      <ul class = "nav-menu">
+      <li class="nav-item"><a class = "nav-link" href="/cookbook">all recipes</a></li>
+      <li class="nav-item"><a class = "nav-link" href="/breakfast">breakfast</a> </li>
+      <li class="nav-item"><a class = "nav-link" href="/mains">mains</a> </li>
+      <li class="nav-item"><a class = "nav-link" href="/sides">sides</a></li>
+      <li class="nav-item"><a class = "nav-link" href="/desserts">desserts</a></li>
+      {{!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a> --}}
+      </ul>
+
+      
+    </nav>
+
  
   <main>
     <body>
@@ -84,6 +106,7 @@
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="/js/menu.js"></script>
 </body>
 
 
