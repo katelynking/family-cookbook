@@ -82,9 +82,9 @@
 }
 
 
-.navbar.navbar-6 .navbar-toggler-icon {
+/* .navbar.navbar-6 .navbar-toggler-icon {
   background-image: url('https://mdbootstrap.com/img/svg/hamburger8.svg?color=E3005C');
-}
+} */
 
 .user-access {
   float: right;
@@ -502,11 +502,16 @@ figcaption {
   color: gray;
 }
 
+header {
+  padding:0px;
+}
+
 .banner-img {
-  width:105%;
+  width:100%;
   height:auto;
   position:relative;
 }
+
 
 .marquee {
   overflow: hidden;
