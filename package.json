@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zzaclipse/familyCookbook.git"
+    "url": "git+https://github.com/katelynking/family-cookbook.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zzaclipse/familyCookbook/issues"
+    "url": "https://github.com/katelynking/family-cookbook/issues"
   },
-  "homepage": "https://github.com/Zzaclipse/familyCookbook#readme",
+  "homepage": "https://github.com/katelynking/family-cookbook#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
