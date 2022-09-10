@@ -30,30 +30,30 @@
               
 
               {{else}}
-              <h2 class="page-title-sign-up">Sign up</h2><span class="hp-login-lg">
-              or <a href="/login" class="login-link">login</a>
+              <h2 class="page-title-sign-up">Login</h2><span class="hp-login-lg">
+              or <a href="/login" class="login-link">sign up</a>
               <br>
               <br>
-              <form class="form signup-form">
-                <div class="form-group">
+              <form class="form login-form">
+                {{!-- <div class="form-group">
                   <label for="username-signup">Name your cookbook:</label>
                   <input class="form-input" type="text" id="username-signup" />
+                </div> --}}
+                <div class="form-group">
+                  <label for="email-login">Email:</label>
+                  <input class="form-input" type="text" id="email-login" placeholder="demo@email.com"/>
                 </div>
                 <div class="form-group">
-                  <label for="email-signup">Email:</label>
-                  <input class="form-input" type="text" id="email-signup" />
+                  <label for="password-login">Password:</label>
+                  <input class="form-input" type="password" id="password-login" placeholder="password"/>
                 </div>
                 <div class="form-group">
-                  <label for="password-signup">Password:</label>
-                  <input class="form-input" type="password" id="password-signup" />
+                  <button class="btn login-form-btn" type="submit">login</button>
+                  </div>
+                  </form>
                 </div>
-                <div class="form-group">
-                  <button id class="btn btn-block join-btn" type="submit">Join</button>
-                  </span>
-                  
-                </div>
-              </form>
-              <script src="./js/frontPageSignUp.js"></script>
+              
+              <script src="./js/login.js"></script>
               {{/if}}
             </div>
             </div>
