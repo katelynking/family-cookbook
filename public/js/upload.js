@@ -108,8 +108,8 @@ const handleRecipeUpload = () => {
   if (category.value === "desserts") {
     catValue = 4;
   }
-  const ingArrJoin = ingredientsArray.join('');
-  const stepArrJoin = stepsArray.join('');
+  const ingArrJoin = ingredientsArray.join('\n');
+  const stepArrJoin = stepsArray.join('\n');
   const newRecipe = {
     recipe_name: recipeName.value,
     description: description.value,
